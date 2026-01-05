@@ -113,7 +113,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/20 bg-surface/30">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-black text-muted-foreground uppercase tracking-widest">
-           <div>© 2024 Talos Protocol</div>
+           <div>© 2026 Talos Protocol</div>
            <div className="flex gap-8">
               <Link href="/products" className="hover:text-primary transition-colors">Catalog</Link>
               <Link href="https://github.com/talosprotocol/talos" className="hover:text-primary transition-colors">GitHub</Link>

@@ -122,7 +122,7 @@ await session.sendSecure({
        <footer className="py-20 px-6 border-t border-border/20 bg-surface/30">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="text-xs font-black text-muted-foreground uppercase tracking-widest antialiased">
-            © 2024 Talos Protocol. MIT Licensed.
+            © 2026 Talos Protocol. MIT Licensed.
           </div>
           <div className="flex gap-12">
              <Link href="https://github.com/talosprotocol/talos" className="text-xs font-black text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest">

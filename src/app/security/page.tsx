@@ -85,7 +85,7 @@ export default function SecurityPage() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/20 bg-surface/30">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-black text-muted-foreground uppercase tracking-widest">
-           <div>© 2024 Talos Protocol Security Group</div>
+           <div>© 2026 Talos Protocol Security Group</div>
            <div className="flex gap-8">
               <Link href="mailto:security@talosprotocol.com" className="hover:text-primary transition-colors">Report Vulnerability</Link>
               <Link href="https://github.com/talosprotocol/talos/wiki/Security-Whitepaper" className="hover:text-primary transition-colors">Whitepaper</Link>

@@ -85,7 +85,7 @@ export default function ServicesPage() {
       <footer className="py-10 px-6 border-t border-border mt-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © 2024 Talos Protocol. MIT Licensed.
+            © 2026 Talos Protocol. MIT Licensed.
           </div>
           <div className="flex gap-6">
              <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
