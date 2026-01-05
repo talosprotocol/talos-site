@@ -9,16 +9,16 @@ export default function ProductsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 border-b border-border/30 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10 blur-[120px]">
+      <section className="relative pt-48 pb-20 px-6 border-b border-border/30 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] -z-10 opacity-10 blur-[120px] pointer-events-none">
           <div className="w-[800px] h-[400px] bg-primary rounded-full mx-auto" />
         </div>
         
         <div className="max-w-7xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter">
-            Product <span className="text-gradient">Catalog</span>
+          <h1 className="text-6xl md:text-8xl font-black text-foreground tracking-tighter uppercase leading-none italic">
+            Product <span className="text-gradient not-italic">Catalog</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Talos is a multi-repo ecosystem built around a contract-driven kernel, with SDKs and services that integrate into agentic toolchains.
           </p>
           <div className="flex justify-center gap-4 pt-4">

@@ -8,17 +8,17 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 glass-panel border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 glass-panel border-b">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-12">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-1 bg-foreground/5">
               <Image 
                 src="/assets/logo-dark.png" 
                 alt="Talos Protocol" 
-                width={32} 
-                height={32}
-                className="object-contain"
+                width={24} 
+                height={24}
+                className="object-contain dark:invert"
                 priority
               />
             </div>

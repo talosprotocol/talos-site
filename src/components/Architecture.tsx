@@ -3,34 +3,42 @@ import { RuntimeFlowDiagram } from "./diagrams/RuntimeFlowDiagram";
 
 export function Architecture() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto space-y-24">
-      {/* Ecosystem View */}
-      <div className="space-y-8">
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-bold text-foreground mb-4 tracking-tight">Contract-driven kernel</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Talos is built around a contract kernel: versioned schemas, APIs, test vectors, and canonical helpers. 
-            Every SDK and service integrates through these published contracts, so components remain replaceable and independently shippable.
-          </p>
-          <p className="text-sm text-primary font-bold uppercase tracking-widest mt-4 opacity-70">
-            Contracts are the integration boundary. No cross-repo source imports.
-          </p>
+    <section id="architecture" className="py-32 px-6 bg-surface/30">
+      <div className="max-w-7xl mx-auto space-y-32">
+        {/* Section 1: Contracts */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="space-y-8 order-2 lg:order-1">
+             <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight leading-tight uppercase italic underline decoration-primary/20">
+              Contract-driven kernel
+            </h2>
+            <div className="space-y-6">
+              <p className="text-xl text-muted-foreground leading-relaxed font-light">
+                Talos is built around a contract kernel: versioned schemas, APIs, test vectors, and canonical helpers. Every SDK and service integrates through these published contracts, so components remain replaceable and independently shippable.
+              </p>
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-primary antialiased">
+                Contracts are the integration boundary. No cross-repo source imports.
+              </p>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <EcosystemDiagram />
+          </div>
         </div>
-        
-        <EcosystemDiagram />
-      </div>
 
-      {/* Runtime View */}
-      <div className="space-y-8">
-        <div className="max-w-3xl ml-auto text-right">
-          <h2 className="text-4xl font-bold text-foreground mb-4 tracking-tight">Runtime: Secure Tool Invocation</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Talos ensures that every agent interaction is authorized, encrypted, and audited by default. 
-            The system maintains a tamper-proof record of every tool invocation across organizational boundaries.
-          </p>
+        {/* Section 2: Runtime */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="order-2">
+            <RuntimeFlowDiagram />
+          </div>
+          <div className="space-y-8 order-1">
+            <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight leading-tight uppercase italic underline decoration-emerald-500/20">
+              Runtime: Secure Tool Invocation
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed font-light">
+              In production, the Talos stack provides high-performance encryption and per-request authorization. Every call is captured via a non-blocking hash-only audit channel, ensuring visibility without compromising execution speed.
+            </p>
+          </div>
         </div>
-        
-        <RuntimeFlowDiagram />
       </div>
     </section>
   );
