@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* Hero */}
       <section className="relative pt-40 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl font-bold text-foreground tracking-tight sm:text-6xl">
+          <h1 className="text-5xl font-bold text-gray-900 tracking-tight sm:text-6xl">
             Scale with <span className="text-gradient">Certainty</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Talos offers high-impact commercial services to ensure your agentic infrastructure is secure, performant, and compliant from day one.
           </p>
         </div>
@@ -63,8 +63,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Engagement Flow */}
-      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-border">
-        <h2 className="text-2xl font-bold text-foreground mb-12 text-center">How We Engage</h2>
+      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-200">
+        <h2 className="text-2xl font-bold text-gray-900 mb-12 text-center">How We Engage</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
            {[
              { step: "01", title: "Discovery", desc: "Initial technical requirements gathering and scope definition." },
@@ -73,25 +73,25 @@ export default function ServicesPage() {
              { step: "04", title: "Rollout", desc: "Full production deployment with ongoing security monitoring." }
            ].map((item) => (
              <div key={item.step} className="space-y-3">
-                <span className="text-4xl font-bold text-primary/20">{item.step}</span>
-                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <span className="text-4xl font-bold text-blue-200">{item.step}</span>
+                <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
              </div>
            ))}
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-6 border-t border-border mt-16">
+      <footer className="py-10 px-6 border-t border-gray-200 mt-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-gray-500">
             © 2026 Talos Protocol. MIT Licensed.
           </div>
           <div className="flex gap-6">
-             <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+             <Link href="/" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Home
             </Link>
-             <Link href="/products" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+             <Link href="/products" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Products
             </Link>
           </div>

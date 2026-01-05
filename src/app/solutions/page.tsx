@@ -27,46 +27,46 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-20 px-6 border-b border-border">
+      <section className="relative pt-40 pb-20 px-6 border-b border-gray-200">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl font-bold text-foreground tracking-tight sm:text-6xl">
+          <h1 className="text-5xl font-bold text-gray-900 tracking-tight sm:text-6xl">
             Solutions
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             See how Talos solves critical challenges in AI agent infrastructure.
           </p>
         </div>
       </section>
 
       {/* Solutions List */}
-      <section className="py-16 px-6 max-w-5xl mx-auto space-y-16">
+      <section className="py-16 px-6 max-w-5xl mx-auto space-y-12">
         {solutions.map((sol, i) => (
-          <div key={sol.title} className="p-8 bg-surface border border-border rounded-2xl space-y-6">
+          <div key={sol.title} className="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm space-y-6">
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">
+              <span className="px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-50 rounded-full">
                 Use Case {i + 1}
               </span>
             </div>
-            <h2 className="text-2xl font-bold text-foreground">{sol.title}</h2>
+            <h2 className="text-2xl font-bold text-gray-900">{sol.title}</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-5 bg-surface-muted rounded-xl border-l-4 border-muted-foreground/20">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Challenge</p>
-                <p className="text-muted-foreground">{sol.problem}</p>
+              <div className="p-5 bg-gray-50 rounded-xl border-l-4 border-gray-300">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Challenge</p>
+                <p className="text-gray-600">{sol.problem}</p>
               </div>
-              <div className="p-5 bg-primary/5 rounded-xl border-l-4 border-primary">
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">Outcome</p>
-                <p className="text-foreground">{sol.outcome}</p>
+              <div className="p-5 bg-blue-50 rounded-xl border-l-4 border-blue-500">
+                <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">Outcome</p>
+                <p className="text-gray-800">{sol.outcome}</p>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-2">
               {sol.components.map((comp) => (
-                <span key={comp} className="px-3 py-1, text-xs font-medium text-muted-foreground bg-surface-muted rounded-full border border-border">
+                <span key={comp} className="px-3 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full border border-gray-200">
                   {comp}
                 </span>
               ))}
@@ -76,13 +76,13 @@ export default function SolutionsPage() {
               <Link 
                 href={sol.docs}
                 target="_blank"
-                className="px-5 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                className="px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
               >
                 View Documentation
               </Link>
               <Link 
                 href="mailto:contact@talosprotocol.com"
-                className="px-5 py-2.5 bg-surface border border-border text-foreground font-semibold rounded-lg hover:bg-surface-muted transition-colors text-sm"
+                className="px-5 py-2.5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
               >
                 Request Demo
               </Link>
@@ -92,16 +92,16 @@ export default function SolutionsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-6 border-t border-border mt-16">
+      <footer className="py-10 px-6 border-t border-gray-200 mt-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-gray-500">
             © 2026 Talos Protocol. MIT Licensed.
           </div>
           <div className="flex gap-6">
-             <Link href="/products" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+             <Link href="/products" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Products
             </Link>
-            <Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/services" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Services
             </Link>
           </div>

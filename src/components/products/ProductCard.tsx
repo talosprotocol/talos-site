@@ -27,37 +27,37 @@ export function ProductCard({
   github_url,
 }: ProductCardProps) {
   const maturityColors = {
-    Alpha: "border-amber-500/30 text-amber-400 bg-amber-500/5",
-    Beta: "border-blue-500/30 text-blue-400 bg-blue-500/5",
-    Stable: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5",
+    Alpha: "border-amber-300 text-amber-600 bg-amber-50",
+    Beta: "border-blue-300 text-blue-600 bg-blue-50",
+    Stable: "border-emerald-300 text-emerald-600 bg-emerald-50",
   };
 
   return (
-    <div className="flex flex-col h-full p-8 bg-surface/50 border border-border/50 rounded-3xl glass-panel transition-all duration-500 hover:border-primary/50 group">
+    <div className="flex flex-col h-full p-8 bg-white border border-gray-200 rounded-2xl shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
       <div className="flex justify-between items-start mb-6">
-        <span className="text-[10px] font-black uppercase tracking-widest text-primary opacity-80">
+        <span className="text-xs font-semibold uppercase tracking-wider text-blue-600">
           {category}
         </span>
-        <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest border ${maturityColors[maturity]}`}>
+        <span className={`px-2 py-0.5 rounded text-xs font-semibold uppercase border ${maturityColors[maturity]}`}>
           {maturity}
         </span>
       </div>
 
-      <h3 className="text-2xl font-bold text-foreground mb-2 tracking-tight group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
         {name}
       </h3>
-      <p className="text-sm font-medium text-muted-foreground mb-6 h-10 overflow-hidden line-clamp-2">
+      <p className="text-sm text-gray-600 mb-6 h-10 overflow-hidden line-clamp-2">
         {tagline}
       </p>
 
       <div className="space-y-4 mb-8 flex-grow">
         <div>
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Audience</p>
-          <p className="text-sm text-foreground/80 font-medium">{audience}</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Audience</p>
+          <p className="text-sm text-gray-800 font-medium">{audience}</p>
         </div>
         <div>
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Solution</p>
-          <p className="text-sm text-foreground/80 leading-relaxed italic border-l-2 border-primary/20 pl-3">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Solution</p>
+          <p className="text-sm text-gray-700 leading-relaxed border-l-2 border-blue-200 pl-3">
             &quot;{outcome}&quot;
           </p>
         </div>
@@ -67,14 +67,14 @@ export function ProductCard({
         <Link 
           href={docs_url} 
           target="_blank"
-          className="flex items-center justify-center px-4 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20"
+          className="flex items-center justify-center px-4 py-2.5 bg-blue-600 text-white text-xs font-semibold rounded-lg hover:bg-blue-700 transition-colors"
         >
           {cta_primary}
         </Link>
         <Link 
           href={github_url || "#"} 
           target="_blank"
-          className="flex items-center justify-center px-4 py-2.5 bg-surface-muted border border-border/50 text-foreground text-xs font-bold rounded-xl hover:bg-surface transition-all"
+          className="flex items-center justify-center px-4 py-2.5 bg-gray-100 border border-gray-200 text-gray-800 text-xs font-semibold rounded-lg hover:bg-gray-200 transition-colors"
         >
           {cta_secondary}
         </Link>
