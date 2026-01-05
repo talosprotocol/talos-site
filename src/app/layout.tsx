@@ -5,6 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://talosprotocol.com'),
   title: 'Talos Protocol | The Trust Layer for AI Agents',
   description: 'Cryptographic identity, capability authorization, and auditable communication channels for the agent economy.',
 };
