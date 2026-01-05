@@ -8,7 +8,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 glass-panel border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-white/95 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-12">
           <Link href="/" className="flex items-center gap-2 group">
@@ -25,12 +25,12 @@ export function Navbar() {
             <span className="font-bold text-gray-900 text-lg tracking-tight uppercase">Talos Protocol</span>
           </Link>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - using darker text */}
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/products" 
               className={`text-sm font-medium transition-colors ${
-                pathname === '/products' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
+                pathname === '/products' ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
               }`}
             >
               Products
@@ -38,7 +38,7 @@ export function Navbar() {
             <Link 
               href="/services" 
               className={`text-sm font-medium transition-colors ${
-                pathname === '/services' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
+                pathname === '/services' ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
               }`}
             >
               Services
@@ -46,7 +46,7 @@ export function Navbar() {
             <Link 
               href="/solutions" 
               className={`text-sm font-medium transition-colors ${
-                pathname === '/solutions' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
+                pathname === '/solutions' ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
               }`}
             >
               Solutions
@@ -58,7 +58,7 @@ export function Navbar() {
           <Link 
             href="/developers" 
             className={`text-sm font-medium transition-colors ${
-              pathname === '/developers' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
+              pathname === '/developers' ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
             }`}
           >
             Developers
@@ -66,7 +66,7 @@ export function Navbar() {
           <Link 
             href="/security" 
             className={`text-sm font-medium transition-colors ${
-              pathname === '/security' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
+              pathname === '/security' ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
             }`}
           >
             Security
