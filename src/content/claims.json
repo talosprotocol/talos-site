@@ -1,0 +1,26 @@
+[
+  {
+    "id": "perf-throughput-ed25519",
+    "claim": "Talos Core verifies capability signatures at high throughput.",
+    "metric_key": "crypto.verify_ed25519.ops_sec",
+    "value": 695000,
+    "unit": "ops/sec",
+    "display_value": "695k",
+    "scope": ["benchmark_strip"],
+    "source_url": "https://github.com/talosprotocol/talos/wiki/Benchmarks",
+    "notes": "M4 Max, single core, Rust implementation",
+    "risk_level": "low"
+  },
+  {
+    "id": "perf-tunnel-overhead",
+    "claim": "MCP Tunnel adds minimal latency overhead.",
+    "metric_key": "net.tunnel.rtt_overhead_ms",
+    "value": 4.2,
+    "unit": "ms",
+    "display_value": "< 5ms",
+    "scope": ["benchmark_strip"],
+    "source_url": "https://github.com/talosprotocol/talos/wiki/Benchmarks",
+    "notes": "Localhost loopback, p99",
+    "risk_level": "low"
+  }
+]

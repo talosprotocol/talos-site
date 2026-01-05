@@ -1,59 +1,36 @@
-# Talos Protocol — Gateway Site
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Marketing-grade landing site for Talos Protocol: a fast, credible gateway that
-explains the product in under two minutes and routes visitors to GitHub, the
-wiki, or a direct conversation.
+## Getting Started
 
-- Stack: Next.js (App Router), Tailwind v4, TypeScript
-- Goals: investor-friendly clarity, WCAG-friendly contrast, 90+ Lighthouse
-
-## Local development
-
-Install dependencies (already present in this workspace after scaffold):
-
-```bash
-npm install
-```
-
-Run the dev server:
+First, run the development server:
 
 ```bash
 npm run dev
-# open http://localhost:3000
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Lint:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run lint
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Build for production:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```bash
-npm run build
-```
+## Learn More
 
-## Content map
+To learn more about Next.js, take a look at the following resources:
 
-- Hero + CTA: “Talos is the missing trust layer for autonomous AI systems.”
-- Problem: identity, authorization, confidentiality, accountability, decentralization
-- Solution tiles: DIDs, capability tokens, forward secrecy, verifiable audit, P2P+DHT
-- How it works: identity → secure session → capability + session cache fast path
-- Benchmarks: Ed25519 verify throughput, capability `authorize_fast`, MCP tunnel overhead (with hardware context)
-- Open source: MIT-licensed, multi-repo architecture, links to GitHub/wiki/threat model
-- Privacy: lightweight policy for the marketing site
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Brand kit
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Colors: brand `#6BE7FF`, violet `#A78BFA`, accent `#7EF2C9`, dark background `#050710`
-- Logo mark: `public/logo-mark.svg`
-- Wordmark: `public/logo-wordmark.svg`
-- Favicon/Icon: `public/icon.svg`, `public/favicon.svg`
-- OG image: `public/og-image.svg`
+## Deploy on Vercel
 
-## Useful links
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- GitHub: https://github.com/talosprotocol/talos
-- Wiki: https://github.com/talosprotocol/talos/wiki
-- Threat model: https://github.com/talosprotocol/talos/wiki/Threat-Model
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
