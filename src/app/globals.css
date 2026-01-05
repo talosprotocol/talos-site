@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050710;
+  --foreground: #eef2fb;
+  --muted: #9fb4d5;
+  --panel: #0c1224;
+  --border: #1f2b42;
+  --brand: #6be7ff;
+  --brand-strong: #a78bfa;
+  --accent: #7ef2c9;
+  --glow: 0 0 120px rgba(107, 231, 255, 0.18);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-accent: var(--accent);
+  --font-sans: "Inter", "SF Pro Display", "SF Pro Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, rgba(107, 231, 255, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(167, 139, 250, 0.08), transparent 28%),
+    radial-gradient(circle at 40% 70%, rgba(126, 242, 201, 0.08), transparent 32%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(107, 231, 255, 0.25);
+  color: var(--foreground);
+}
+
+.card-surface {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(107, 231, 255, 0.02)),
+    rgba(12, 18, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
