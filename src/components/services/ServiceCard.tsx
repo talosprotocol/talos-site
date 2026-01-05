@@ -4,7 +4,7 @@ interface ServiceCardProps {
   deliverables: string[];
   engagement: string;
   cta: string;
-  variant?: "primary" | "secondary";
+  featured?: boolean;
 }
 
 export function ServiceCard({
@@ -13,55 +13,44 @@ export function ServiceCard({
   deliverables,
   engagement,
   cta,
-  variant = "secondary",
-}: ServiceCardProps) {
+  featured = false,
+}: Readonly<ServiceCardProps>) {
   return (
-    <div className={`flex flex-col p-10 rounded-[2.5rem] border transition-all duration-500 h-full ${
-      variant === "primary" 
-        ? "bg-primary text-white border-primary shadow-2xl shadow-blue-500/20" 
-        : "bg-surface/50 text-foreground border-border/50 glass-panel hover:border-primary/30"
+    <div className={`flex flex-col p-8 rounded-2xl border transition-all duration-300 h-full ${
+      featured 
+        ? "bg-surface border-primary/30 shadow-lg ring-1 ring-primary/10" 
+        : "bg-surface border-border"
     }`}>
-      <h3 className="text-3xl font-black mb-4 tracking-tighter">{title}</h3>
-      <p className={`text-lg mb-8 leading-relaxed ${
-        variant === "primary" ? "text-blue-50 opacity-90" : "text-muted-foreground"
-      }`}>
-        {description}
-      </p>
+      {featured && (
+        <span className="self-start px-3 py-1 mb-4 text-xs font-semibold text-primary bg-primary/10 rounded-full">
+          Most Popular
+        </span>
+      )}
+      <h3 className="text-2xl font-bold text-foreground mb-3">{title}</h3>
+      <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
 
-      <div className="flex-grow space-y-6 mb-10">
-        <p className={`text-xs font-black uppercase tracking-widest ${
-          variant === "primary" ? "text-white" : "text-primary"
-        }`}>
-          Key Deliverables
-        </p>
-        <ul className="space-y-4">
+      <div className="flex-grow space-y-4 mb-8">
+        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Key Deliverables</p>
+        <ul className="space-y-3">
           {deliverables.map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${
-                variant === "primary" ? "bg-white" : "bg-primary"
-              }`} />
-              <span className={`text-sm font-medium ${
-                variant === "primary" ? "text-blue-50" : "text-foreground/80"
-              }`}>{item}</span>
+            <li key={item} className="flex items-start gap-2">
+              <span className="mt-2 w-1.5 h-1.5 rounded-full shrink-0 bg-primary" />
+              <span className="text-sm text-foreground">{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="pt-8 border-t border-current/10">
-        <p className={`text-xs font-black uppercase tracking-widest mb-4 ${
-          variant === "primary" ? "text-white/70" : "text-muted-foreground"
-        }`}>
-          Typical Engagement
-        </p>
-        <p className="font-bold text-lg mb-8">{engagement}</p>
+      <div className="pt-6 border-t border-border">
+        <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">Typical Engagement</p>
+        <p className="font-semibold text-foreground mb-6">{engagement}</p>
         
         <a 
           href={`mailto:contact@talosprotocol.com?subject=Inquiry:%20${encodeURIComponent(title)}`}
-          className={`w-full inline-flex items-center justify-center px-8 py-4 rounded-full font-bold transition-all ${
-            variant === "primary" 
-              ? "bg-white text-primary hover:bg-blue-50" 
-              : "bg-primary text-white hover:bg-blue-600 shadow-lg shadow-blue-500/20"
+          className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+            featured 
+              ? "bg-primary text-white hover:bg-blue-700" 
+              : "bg-surface-muted text-foreground hover:bg-primary/10"
           }`}
         >
           {cta}

@@ -1,91 +1,92 @@
 export function RuntimeFlowDiagram() {
   return (
-    <div className="w-full bg-surface/30 rounded-[3rem] border border-border/50 p-12 glass-panel group shadow-premium">
-      <h3 className="text-sm font-black text-primary uppercase tracking-[0.4em] mb-12 text-center">
-        Runtime: Secure tool invocation with auditability
-      </h3>
-      
-      <div className="relative aspect-[16/9] w-full max-w-4xl mx-auto">
-        <svg viewBox="0 0 800 450" className="w-full h-full drop-shadow-2xl">
-          {/* Main Flow (Horizontal) */}
-          <g className="main-path">
-            {/* Boxes */}
-            {[
-              { id: 'agent', label: 'Agent / Client', x: 100, y: 150 },
-              { id: 'sdk', label: 'Talos SDK (TS/Py)', x: 300, y: 150 },
-            ].map((node) => (
-              <g key={node.id} transform={`translate(${node.x}, ${node.y})`}>
-                <rect x="-60" y="-30" width="120" height="60" rx="12" className="fill-surface stroke-border" />
-                <text textAnchor="middle" alignmentBaseline="middle" className="fill-foreground font-black text-[11px] uppercase tracking-tighter italic">{node.label}</text>
-              </g>
-            ))}
-
-            {/* Branching Logic */}
-            <g transform="translate(500, 150)">
-               {/* MCP Path */}
-               <path d="M 0 0 L 100 -60" stroke="currentColor" className="text-primary/40" strokeWidth="2" fill="none" />
-               <g transform="translate(100, -60)">
-                  <rect x="-70" y="-30" width="140" height="60" rx="12" className="fill-primary/5 stroke-primary/30" />
-                  <text textAnchor="middle" alignmentBaseline="middle" className="fill-foreground font-black text-[10px] uppercase">MCP Connector</text>
-                  <text y="12" textAnchor="middle" className="fill-muted-foreground text-[8px] italic">(secure bridge)</text>
-                  
-                  <path d="M 70 0 L 120 0" stroke="currentColor" className="text-primary/40" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-                  <g transform="translate(120, 0)">
-                     <rect x="-50" y="-20" width="100" height="40" rx="8" className="fill-surface stroke-border" />
-                     <text textAnchor="middle" alignmentBaseline="middle" className="fill-muted-foreground font-bold text-[9px]">MCP Tool Server</text>
-                  </g>
-               </g>
-
-               {/* Gateway Path */}
-               <path d="M 0 0 L 100 60" stroke="currentColor" className="text-primary/40" strokeWidth="2" fill="none" />
-               <g transform="translate(100, 60)">
-                  <rect x="-70" y="-30" width="140" height="60" rx="12" className="fill-surface stroke-border" />
-                  <text textAnchor="middle" alignmentBaseline="middle" className="fill-foreground font-black text-[10px] uppercase">Gateway</text>
-                  <text y="12" textAnchor="middle" className="fill-muted-foreground text-[8px] italic">(API entrypoint)</text>
-
-                   <path d="M 70 0 L 120 0" stroke="currentColor" className="text-primary/40" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-                   <g transform="translate(120, 0)">
-                     <rect x="-50" y="-20" width="100" height="40" rx="8" className="fill-surface stroke-border" />
-                     <text textAnchor="middle" alignmentBaseline="middle" className="fill-muted-foreground font-bold text-[9px]">Service / Tool</text>
-                  </g>
-               </g>
-            </g>
-
-            {/* Connecting Arrows with Labels */}
-            <path d="M 160 150 L 240 150" stroke="currentColor" className="text-primary" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-            <text x="200" y="140" textAnchor="middle" className="fill-primary font-black text-[7px] uppercase tracking-widest antialiased">Encrypted session</text>
-
-            <path d="M 360 150 L 500 150" stroke="currentColor" className="text-primary" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-            <text x="430" y="140" textAnchor="middle" className="fill-primary font-black text-[7px] uppercase tracking-widest antialiased">Per-request authorization</text>
-          </g>
-
-          {/* Audit Side Channel */}
-          <g transform="translate(400, 320)">
-             <path d="M -100 -170 L 0 0" stroke="currentColor" className="text-emerald-500/20" strokeWidth="2" fill="none" strokeDasharray="5 5" />
-             <path d="M 100 -110 L 0 0" stroke="currentColor" className="text-emerald-500/20" strokeWidth="2" fill="none" strokeDasharray="5 5" />
-             
-             <rect x="-70" y="-30" width="140" height="60" rx="30" className="fill-emerald-500/5 stroke-emerald-500/30" />
-             <text textAnchor="middle" alignmentBaseline="middle" className="fill-foreground font-black text-[11px] uppercase italic">Audit Service</text>
-             <text x="0" y="-45" textAnchor="middle" className="fill-emerald-500 font-black text-[7px] uppercase tracking-widest antialiased">Audit commit (hash-only)</text>
-
-             <path d="M 70 0 L 150 0" stroke="currentColor" className="text-emerald-500/30" strokeWidth="2" fill="none" markerEnd="url(#arrow-audit)" />
-             <g transform="translate(150, 0)">
-                <rect x="-50" y="-20" width="100" height="40" rx="8" className="fill-surface stroke-border" />
-                <text textAnchor="middle" alignmentBaseline="middle" className="fill-muted-foreground font-black text-[10px] uppercase">Dashboard</text>
-             </g>
-          </g>
-
-          {/* Arrow Markers */}
+    <div className="w-full">
+      <div className="relative w-full max-w-5xl mx-auto">
+        <svg viewBox="0 0 900 400" className="w-full h-auto">
           <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orientation="auto">
-              <polygon points="0 0, 10 3.5, 0 7" className="fill-primary" />
+            <marker id="blueArrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+              <path d="M 0 0 L 12 4 L 0 8 L 3 4 Z" fill="#0071e3" />
             </marker>
-            <marker id="arrow-audit" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orientation="auto">
-              <polygon points="0 0, 10 3.5, 0 7" className="fill-emerald-500" />
+            <marker id="greenArrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+              <path d="M 0 0 L 12 4 L 0 8 L 3 4 Z" fill="#34c759" />
             </marker>
           </defs>
+
+          {/* Execution lane background - positioned to not overlap nodes */}
+          <rect x="30" y="40" width="840" height="160" rx="16" fill="#0071e3" fillOpacity="0.02" stroke="#0071e3" strokeOpacity="0.1" strokeWidth="1" />
+          <text x="50" y="65" className="fill-primary text-[11px] font-semibold uppercase tracking-wider">Execution Path</text>
+
+          {/* Agent Node */}
+          <rect x="60" y="90" width="120" height="70" rx="12" className="fill-surface stroke-border" strokeWidth="1.5" />
+          <text x="120" y="120" textAnchor="middle" className="fill-foreground font-semibold text-[14px]">Agent</text>
+          <text x="120" y="140" textAnchor="middle" className="fill-muted-foreground text-[10px]">AI Client</text>
+
+          {/* Universal SDK Node - highlighted */}
+          <rect x="240" y="90" width="140" height="70" rx="12" fill="#0071e3" fillOpacity="0.08" stroke="#0071e3" strokeWidth="1.5" />
+          <text x="310" y="115" textAnchor="middle" className="fill-foreground font-semibold text-[13px]">Universal SDK</text>
+          <text x="310" y="133" textAnchor="middle" className="fill-muted-foreground text-[9px]">TypeScript · Python</text>
+          <text x="310" y="148" textAnchor="middle" className="fill-muted-foreground text-[9px]">Java · Go · Rust</text>
+
+          {/* MCP Connector */}
+          <rect x="480" y="75" width="140" height="55" rx="10" className="fill-surface stroke-border" strokeWidth="1.5" />
+          <text x="550" y="100" textAnchor="middle" className="fill-foreground font-medium text-[12px]">MCP Connector</text>
+          <text x="550" y="118" textAnchor="middle" className="fill-muted-foreground text-[9px]">Tool Bridge</text>
+
+          {/* Gateway */}
+          <rect x="480" y="145" width="140" height="55" rx="10" className="fill-surface stroke-border" strokeWidth="1.5" />
+          <text x="550" y="170" textAnchor="middle" className="fill-foreground font-medium text-[12px]">Gateway</text>
+          <text x="550" y="188" textAnchor="middle" className="fill-muted-foreground text-[9px]">REST API</text>
+
+          {/* Targets */}
+          <rect x="720" y="80" width="100" height="45" rx="8" className="fill-surface-muted stroke-border" strokeWidth="1" />
+          <text x="770" y="108" textAnchor="middle" className="fill-muted-foreground text-[11px]">MCP Tool</text>
+
+          <rect x="720" y="150" width="100" height="45" rx="8" className="fill-surface-muted stroke-border" strokeWidth="1" />
+          <text x="770" y="178" textAnchor="middle" className="fill-muted-foreground text-[11px]">Service</text>
+
+          {/* Execution arrows */}
+          <line x1="180" y1="125" x2="235" y2="125" stroke="#0071e3" strokeWidth="2" markerEnd="url(#blueArrow)" />
+          <text x="208" y="115" textAnchor="middle" className="fill-primary text-[9px] font-medium">E2EE</text>
+
+          <line x1="380" y1="115" x2="475" y2="102" stroke="#0071e3" strokeWidth="2" markerEnd="url(#blueArrow)" />
+          <line x1="380" y1="135" x2="475" y2="172" stroke="#0071e3" strokeWidth="2" markerEnd="url(#blueArrow)" />
+          <text x="420" y="108" className="fill-primary text-[9px] font-medium">Auth</text>
+
+          <line x1="620" y1="102" x2="715" y2="102" stroke="#0071e3" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#blueArrow)" />
+          <line x1="620" y1="172" x2="715" y2="172" stroke="#0071e3" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#blueArrow)" />
+
+          {/* Audit lane - below execution with proper spacing */}
+          <rect x="180" y="260" width="500" height="100" rx="16" fill="#34c759" fillOpacity="0.02" stroke="#34c759" strokeOpacity="0.1" strokeWidth="1" />
+          <text x="200" y="285" className="fill-[#34c759] text-[11px] font-semibold uppercase tracking-wider">Audit Channel</text>
+
+          {/* Audit Service */}
+          <rect x="290" y="305" width="130" height="45" rx="22" fill="#34c759" fillOpacity="0.08" stroke="#34c759" strokeOpacity="0.4" strokeWidth="1.5" />
+          <text x="355" y="333" textAnchor="middle" className="fill-foreground font-semibold text-[12px]">Audit Service</text>
+
+          {/* Dashboard */}
+          <rect x="500" y="305" width="120" height="45" rx="10" className="fill-surface stroke-border" strokeWidth="1.5" />
+          <text x="560" y="333" textAnchor="middle" className="fill-foreground font-medium text-[11px]">Dashboard</text>
+
+          {/* Dashed audit lines */}
+          <path d="M 310 160 L 310 220 L 330 305" fill="none" stroke="#34c759" strokeWidth="1.5" strokeDasharray="6 4" strokeOpacity="0.6" />
+          <path d="M 550 200 L 550 250 L 380 305" fill="none" stroke="#34c759" strokeWidth="1.5" strokeDasharray="6 4" strokeOpacity="0.6" />
+
+          {/* Audit arrow */}
+          <line x1="420" y1="328" x2="495" y2="328" stroke="#34c759" strokeWidth="2" markerEnd="url(#greenArrow)" />
+          <text x="458" y="318" textAnchor="middle" className="fill-[#34c759] text-[9px] font-medium">Hash</text>
+
+          {/* Legend */}
+          <g transform="translate(50, 375)">
+            <line x1="0" y1="0" x2="25" y2="0" stroke="#0071e3" strokeWidth="2" />
+            <text x="32" y="4" className="fill-muted-foreground text-[10px]">Execution</text>
+            <line x1="100" y1="0" x2="125" y2="0" stroke="#34c759" strokeWidth="1.5" strokeDasharray="6 4" />
+            <text x="132" y="4" className="fill-muted-foreground text-[10px]">Audit</text>
+          </g>
         </svg>
       </div>
+      <p className="mt-8 text-center text-muted-foreground text-base max-w-xl mx-auto">
+        Every request is encrypted, authorized, and logged. Parallel audit commits provide visibility without latency.
+      </p>
     </div>
   );
 }

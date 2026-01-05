@@ -8,21 +8,20 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center space-y-8 animate-in fade-in duration-1000">
-           <h1 className="text-6xl md:text-8xl font-black text-foreground tracking-tighter leading-none">
-            Scale with <br className="hidden md:block" />
-            <span className="text-gradient">Certainty</span>
+      <section className="relative pt-40 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h1 className="text-5xl font-bold text-foreground tracking-tight sm:text-6xl">
+            Scale with <span className="text-gradient">Certainty</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Talos offers high-impact commercial services to ensure your agentic infrastructure is secure, performant, and compliant from day one.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <ServiceCard 
             title="Advisory"
             description="High-level architecture review and threat modeling for existing and new agent toolchains."
@@ -36,7 +35,7 @@ export default function ServicesPage() {
             cta="Book Discovery"
           />
           <ServiceCard 
-            variant="primary"
+            featured={true}
             title="Implementation"
             description="Deep engineering support to deploy and harden the Talos stack within your sovereign infrastructure."
             deliverables={[
@@ -64,20 +63,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Engagement Flow */}
-      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-border/20">
-        <h2 className="text-4xl font-black text-foreground mb-16 text-center uppercase tracking-widest opacity-80">How we engage</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-border">
+        <h2 className="text-2xl font-bold text-foreground mb-12 text-center">How We Engage</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
            {[
              { step: "01", title: "Discovery", desc: "Initial technical requirements gathering and scope definition." },
              { step: "02", title: "Review", desc: "Thorough security review of your current agent execution environment." },
              { step: "03", title: "Pilot", desc: "Guided deployment of Talos primitives in a controlled environment." },
              { step: "04", title: "Rollout", desc: "Full production deployment with ongoing security monitoring." }
            ].map((item) => (
-             <div key={item.step} className="space-y-4 relative group">
-                <span className="text-6xl font-black text-primary/10 group-hover:text-primary/20 transition-colors duration-500 leading-none antialiased">
-                  {item.step}
-                </span>
-                <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+             <div key={item.step} className="space-y-3">
+                <span className="text-4xl font-bold text-primary/20">{item.step}</span>
+                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
              </div>
            ))}
@@ -85,17 +82,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border/20 bg-surface/30 mt-24">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
+      <footer className="py-10 px-6 border-t border-border mt-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-muted-foreground">
             © 2024 Talos Protocol. MIT Licensed.
           </div>
-          <div className="flex gap-8">
-             <Link href="/" className="text-xs font-bold text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest">
-              Back to Home
+          <div className="flex gap-6">
+             <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Home
             </Link>
-             <Link href="/products" className="text-xs font-bold text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest">
-              Explore Products
+             <Link href="/products" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Products
             </Link>
           </div>
         </div>
