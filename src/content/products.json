@@ -1,0 +1,104 @@
+[
+  {
+    "id": "talos-contracts",
+    "name": "Talos Contracts",
+    "category": "Core",
+    "maturity": "Stable",
+    "tagline": "The single source of truth for Talos Protocol schemas and vectors.",
+    "audience": "Builders & Security Architects",
+    "problem": "Fragmented security schemas across multiple languages and services.",
+    "outcome": "Strict, contract-driven interoperability and deterministic verification.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-contracts" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-contracts/wiki",
+    "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
+    "cta_primary": "Explore Schemas",
+    "cta_secondary": "View on GitHub"
+  },
+  {
+    "id": "talos-core-rs",
+    "name": "Talos Core Rust",
+    "category": "Core",
+    "maturity": "Stable",
+    "tagline": "High-performance cryptographic kernel for the Talos ecosystem.",
+    "audience": "Platform Engineers",
+    "problem": "Performance bottlenecks in cryptographic operations and encoding.",
+    "outcome": "Blazing fast, memory-safe kernel wedge for critical security paths.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-core-rs" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-core-rs/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "Performance Specs",
+    "cta_secondary": "View Source"
+  },
+  {
+    "id": "talos-sdk-ts",
+    "name": "TypeScript SDK",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "Build secure agentic toolchains in Node.js and Browser.",
+    "audience": "Full-stack Developers",
+    "problem": "Complex cryptographic workflows taxing frontend and backend developers.",
+    "outcome": "Seamless, type-safe integration of Talos primitives into JS/TS apps.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-ts" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-ts/wiki",
+    "integrates_with": ["talos-gateway", "talos-dashboard"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "NPM Package"
+  },
+  {
+    "id": "talos-sdk-py",
+    "name": "Python SDK",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "The authoritative SDK for AI researchers and engineers.",
+    "audience": "AI Engineers",
+    "problem": "Lack of security primitives in mainstream AI agent frameworks.",
+    "outcome": "Native integration with LangChain, AutoGPT, and custom AI toolchains.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-py" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-py/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "PyPI Guide",
+    "cta_secondary": "GitHub"
+  },
+  {
+    "id": "talos-gateway",
+    "name": "Talos Gateway",
+    "category": "Infrastructure",
+    "maturity": "Beta",
+    "tagline": "Centralized REST API for agent audit and authorization.",
+    "audience": "DevSecOps",
+    "problem": "Unmonitored agent-to-tool communication and lack of audit trails.",
+    "outcome": "Unified control plane for all agentic interactions with centralized logging.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-gateway" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-gateway/wiki",
+    "integrates_with": ["talos-audit-service", "talos-dashboard"],
+    "cta_primary": "Deployment Guide",
+    "cta_secondary": "API Specs"
+  },
+  {
+    "id": "talos-dashboard",
+    "name": "Talos Dashboard",
+    "category": "Console",
+    "maturity": "Beta",
+    "tagline": "Visual command center for your agentic infrastructure.",
+    "audience": "Security & Site Reliability",
+    "problem": "Opaque agent operations making incident response difficult.",
+    "outcome": "Real-time visibility into audit logs, capability usage, and system health.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-dashboard" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-dashboard/wiki",
+    "integrates_with": ["talos-gateway", "talos-audit-service"],
+    "cta_primary": "Live Demo",
+    "cta_secondary": "Self-host"
+  }
+]

@@ -1,53 +1,82 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-white/70 backdrop-blur-xl border-b border-slate-200/50 supports-[backdrop-filter]:bg-white/60">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 glass-panel border-b border-border/50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-12">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold group-hover:bg-blue-600 transition-colors">
-              T
+            <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+              <Image 
+                src="/assets/logo-dark.png" 
+                alt="Talos Protocol" 
+                width={32} 
+                height={32}
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="font-bold text-slate-900 text-lg tracking-tight">Talos Protocol</span>
+            <span className="font-bold text-foreground text-lg tracking-tight uppercase">Talos Protocol</span>
           </Link>
 
-          {/* Tabs */}
-          <div className="hidden md:flex bg-slate-100/50 p-1 rounded-full border border-slate-200/50">
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-8">
             <Link 
-              href="/" 
-              className={`px-5 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
-                pathname === '/' 
-                  ? 'bg-white text-slate-900 shadow-sm ring-1 ring-slate-200' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/50'
+              href="/products" 
+              className={`text-sm font-medium transition-colors ${
+                pathname === '/products' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              Investors
+              Products
             </Link>
             <Link 
-              href="/developers" 
-              className={`px-5 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
-                pathname === '/developers' 
-                  ? 'bg-white text-slate-900 shadow-sm ring-1 ring-slate-200' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/50'
+              href="/services" 
+              className={`text-sm font-medium transition-colors ${
+                pathname === '/services' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              Developers
+              Services
+            </Link>
+            <Link 
+              href="/solutions" 
+              className={`text-sm font-medium transition-colors ${
+                pathname === '/solutions' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Solutions
             </Link>
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
-            <Link href="https://github.com/talosprotocol/talos" target="_blank" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-            GitHub
+        <div className="flex items-center gap-8">
+          <Link 
+            href="/developers" 
+            className={`text-sm font-medium transition-colors ${
+              pathname === '/developers' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Developers
           </Link>
-          <Link href="https://github.com/talosprotocol/talos/wiki" target="_blank" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-            Docs
+          <Link 
+            href="/security" 
+            className={`text-sm font-medium transition-colors ${
+              pathname === '/security' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Security
+          </Link>
+          <Link 
+            href="https://github.com/talosprotocol/talos" 
+            target="_blank" 
+            className="px-4 py-2 text-sm font-semibold text-primary-foreground bg-primary rounded-full hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20"
+          >
+            GitHub
           </Link>
         </div>
       </div>
