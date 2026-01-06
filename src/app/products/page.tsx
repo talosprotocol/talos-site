@@ -121,12 +121,15 @@ export default function ProductsPage() {
             © 2026 Talos Protocol. MIT Licensed.
           </div>
           <div className="flex gap-6">
-             <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-              GitHub
-            </Link>
-            <Link href="https://github.com/talosprotocol/talos/wiki" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-              Docs
-            </Link>
+              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+               GitHub
+             </Link>
+             <Link href="https://github.com/talosprotocol/talos/blob/main/docs/WHITEPAPER.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+               Whitepaper
+             </Link>
+             <Link href="https://github.com/talosprotocol/talos/wiki" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+               Docs
+             </Link>
           </div>
         </div>
       </footer>
