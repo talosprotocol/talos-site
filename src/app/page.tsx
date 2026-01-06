@@ -29,7 +29,7 @@ export default function Home() {
              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-slate-500 hover:text-slate-900">
               GitHub
             </Link>
-             <Link href="https://github.com/talosprotocol/talos/blob/main/docs/WHITEPAPER.md" className="text-sm text-slate-500 hover:text-slate-900">
+             <Link href="https://github.com/talosprotocol/talos-docs/blob/main/WHITEPAPER.md" className="text-sm text-slate-500 hover:text-slate-900">
               Whitepaper
             </Link>
             <Link href="/security/disclosure" className="text-sm text-slate-500 hover:text-slate-900">
