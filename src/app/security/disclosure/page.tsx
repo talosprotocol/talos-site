@@ -19,7 +19,7 @@ export default function SecurityDisclosure() {
                 Please report vulnerabilities via email to <a href="mailto:security@talosprotocol.com" className="font-bold text-blue-600">security@talosprotocol.com</a>.
             </p>
             <p>
-                Include "VULNERABILITY" in the subject line. We accept reports encrypted with our PGP key (see <code>/.well-known/security.txt</code>).
+                Include &quot;VULNERABILITY&quot; in the subject line. We accept reports encrypted with our PGP key (see <code>/.well-known/security.txt</code>).
             </p>
 
             <h3>What to Include</h3>
