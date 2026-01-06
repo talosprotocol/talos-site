@@ -1,75 +1,8 @@
 [
   {
-    "id": "talos-contracts",
-    "name": "Talos Contracts",
-    "category": "Core",
-    "maturity": "Stable",
-    "tagline": "The single source of truth for Talos Protocol schemas and vectors.",
-    "audience": "Builders & Security Architects",
-    "problem": "Fragmented security schemas across multiple languages and services.",
-    "outcome": "Strict, contract-driven interoperability and deterministic verification.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-contracts" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-contracts/wiki",
-    "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
-    "cta_primary": "Explore Schemas",
-    "cta_secondary": "View on GitHub"
-  },
-  {
-    "id": "talos-core-rs",
-    "name": "Talos Core Rust",
-    "category": "Core",
-    "maturity": "Stable",
-    "tagline": "High-performance cryptographic kernel for the Talos ecosystem.",
-    "audience": "Platform Engineers",
-    "problem": "Performance bottlenecks in cryptographic operations and encoding.",
-    "outcome": "Blazing fast, memory-safe kernel wedge for critical security paths.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-core-rs" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-core-rs/wiki",
-    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Performance Specs",
-    "cta_secondary": "View Source"
-  },
-  {
-    "id": "talos-sdk-ts",
-    "name": "TypeScript SDK",
-    "category": "SDKs",
-    "maturity": "Stable",
-    "tagline": "Build secure agentic toolchains in Node.js and Browser.",
-    "audience": "Full-stack Developers",
-    "problem": "Complex cryptographic workflows taxing frontend and backend developers.",
-    "outcome": "Seamless, type-safe integration of Talos primitives into JS/TS apps.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-ts" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-sdk-ts/wiki",
-    "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install from Source"
-  },
-  {
-    "id": "talos-sdk-py",
-    "name": "Python SDK",
-    "category": "SDKs",
-    "maturity": "Stable",
-    "tagline": "The authoritative SDK for AI researchers and engineers.",
-    "audience": "AI Engineers",
-    "problem": "Lack of security primitives in mainstream AI agent frameworks.",
-    "outcome": "Native integration with LangChain, AutoGPT, and custom AI toolchains.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-py" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-sdk-py/wiki",
-    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install from Source"
-  },
-  {
     "id": "talos-gateway",
     "name": "Talos Gateway",
+    "group": "Primary Products",
     "category": "Infrastructure",
     "maturity": "Beta",
     "tagline": "Centralized REST API for agent audit and authorization.",
@@ -87,6 +20,7 @@
   {
     "id": "talos-dashboard",
     "name": "Talos Dashboard",
+    "group": "Primary Products",
     "category": "Console",
     "maturity": "Beta",
     "tagline": "Visual command center for your agentic infrastructure.",
@@ -104,6 +38,7 @@
   {
     "id": "talos-audit-service",
     "name": "Talos Audit Service",
+    "group": "Primary Products",
     "category": "Infrastructure",
     "maturity": "Beta",
     "tagline": "Immutable, tamper-evident logging and compliance microservice.",
@@ -121,6 +56,7 @@
   {
     "id": "talos-mcp-connector",
     "name": "Talos MCP Connector",
+    "group": "Primary Products",
     "category": "Infrastructure",
     "maturity": "Stable",
     "tagline": "The bridge between legacy Model Context Protocol servers and the Talos Network.",
@@ -136,42 +72,9 @@
     "cta_secondary": "View Source"
   },
   {
-    "id": "talos-sdk-java",
-    "name": "Java SDK",
-    "category": "SDKs",
-    "maturity": "Stable",
-    "tagline": "Enterprise-grade JVM implementation of the Talos Protocol.",
-    "audience": "Enterprise Developers & Architect",
-    "problem": "Integrating agentic security into large-scale, legacy Java/Kotlin ecosystems.",
-    "outcome": "Thread-safe, Spring-compatible security primitives for the enterprise JVM.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-java" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-sdk-java/wiki",
-    "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install"
-  },
-  {
-    "id": "talos-sdk-go",
-    "name": "Go SDK",
-    "category": "SDKs",
-    "maturity": "Alpha",
-    "tagline": "High-throughput, concurrent-safe implementation for cloud-native agents.",
-    "audience": "Infrastructure Engineers",
-    "problem": "Performance overhead in high-frequency agentic communication and trading.",
-    "outcome": "Lightning-fast secure sessions leveraging Go's native concurrency model.",
-    "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-go" }
-    ],
-    "docs_url": "https://github.com/talosprotocol/talos-sdk-go/wiki",
-    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "View Alpha Source"
-  },
-  {
     "id": "talos-aiops",
     "name": "Secure DevOps Agent",
+    "group": "Primary Products",
     "category": "Applications",
     "maturity": "Alpha",
     "tagline": "Autonomous infrastructure automation secured by Talos.",
@@ -189,6 +92,7 @@
   {
     "id": "talos-ai-chat-agent",
     "name": "Secure AI Chat",
+    "group": "Primary Products",
     "category": "Applications",
     "maturity": "Stable",
     "tagline": "Privacy-first chat application with end-to-end encryption.",
@@ -202,5 +106,115 @@
     "integrates_with": ["talos-contracts", "talos-sdk-ts"],
     "cta_primary": "Start Chatting",
     "cta_secondary": "Security Model"
+  },
+  {
+    "id": "talos-contracts",
+    "name": "Talos Contracts",
+    "group": "Primary Products",
+    "subgroup": "Talos Protocol Core",
+    "category": "Core",
+    "maturity": "Stable",
+    "tagline": "The single source of truth for Talos Protocol schemas and vectors.",
+    "audience": "Builders & Security Architects",
+    "problem": "Fragmented security schemas across multiple languages and services.",
+    "outcome": "Strict, contract-driven interoperability and deterministic verification.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-contracts" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-contracts/wiki",
+    "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
+    "cta_primary": "Explore Schemas",
+    "cta_secondary": "View on GitHub"
+  },
+  {
+    "id": "talos-core-rs",
+    "name": "Talos Core Rust",
+    "group": "Primary Products",
+    "subgroup": "Talos Protocol Core",
+    "category": "Core",
+    "maturity": "Stable",
+    "tagline": "High-performance cryptographic kernel for the Talos ecosystem.",
+    "audience": "Platform Engineers",
+    "problem": "Performance bottlenecks in cryptographic operations and encoding.",
+    "outcome": "Blazing fast, memory-safe kernel wedge for critical security paths.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-core-rs" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-core-rs/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "Performance Specs",
+    "cta_secondary": "View Source"
+  },
+  {
+    "id": "talos-sdk-ts",
+    "name": "TypeScript SDK",
+    "group": "SDKs",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "Build secure agentic toolchains in Node.js and Browser.",
+    "audience": "Full-stack Developers",
+    "problem": "Complex cryptographic workflows taxing frontend and backend developers.",
+    "outcome": "Seamless, type-safe integration of Talos primitives into JS/TS apps.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-ts" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-ts/wiki",
+    "integrates_with": ["talos-gateway", "talos-dashboard"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "Install from Source"
+  },
+  {
+    "id": "talos-sdk-py",
+    "name": "Python SDK",
+    "group": "SDKs",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "The authoritative SDK for AI researchers and engineers.",
+    "audience": "AI Engineers",
+    "problem": "Lack of security primitives in mainstream AI agent frameworks.",
+    "outcome": "Native integration with LangChain, AutoGPT, and custom AI toolchains.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-py" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-py/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "Install from Source"
+  },
+  {
+    "id": "talos-sdk-java",
+    "name": "Java SDK",
+    "group": "SDKs",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "Enterprise-grade JVM implementation of the Talos Protocol.",
+    "audience": "Enterprise Developers & Architect",
+    "problem": "Integrating agentic security into large-scale, legacy Java/Kotlin ecosystems.",
+    "outcome": "Thread-safe, Spring-compatible security primitives for the enterprise JVM.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-java" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-java/wiki",
+    "integrates_with": ["talos-gateway", "talos-audit-service"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "Install"
+  },
+  {
+    "id": "talos-sdk-go",
+    "name": "Go SDK",
+    "group": "SDKs",
+    "category": "SDKs",
+    "maturity": "Alpha",
+    "tagline": "High-throughput, concurrent-safe implementation for cloud-native agents.",
+    "audience": "Infrastructure Engineers",
+    "problem": "Performance overhead in high-frequency agentic communication and trading.",
+    "outcome": "Lightning-fast secure sessions leveraging Go's native concurrency model.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-go" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-go/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "View Alpha Source"
   }
 ]

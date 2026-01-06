@@ -3,7 +3,26 @@ import { ProductCard } from "@/components/products/ProductCard";
 import products from "@/content/products.json";
 import Link from 'next/link';
 
+interface Product {
+  id: string;
+  name: string;
+  group: string;
+  subgroup?: string;
+  category: string;
+  maturity: "Alpha" | "Beta" | "Stable";
+  tagline: string;
+  audience: string;
+  problem: string;
+  outcome: string;
+  repos: { label: string; url: string; }[];
+  docs_url: string;
+  cta_primary: string;
+  cta_secondary: string;
+}
+
 export default function ProductsPage() {
+  const typedProducts = products as unknown as Product[];
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -24,22 +43,61 @@ export default function ProductsPage() {
              <div className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">
                <span className="w-2 h-2 rounded-full bg-blue-500" /> Beta
              </div>
+             <div className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">
+               <span className="w-2 h-2 rounded-full bg-amber-500" /> Alpha
+             </div>
           </div>
         </div>
       </section>
 
       {/* Grid Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-            // @ts-expect-error - ProductCard props spread from JSON metadata
-            <ProductCard 
-              key={product.id} 
-              {...product} 
-              github_url={product.repos[0]?.url}
-            />
-          ))}
-        </div>
+      <section className="py-16 px-6 max-w-6xl mx-auto space-y-24">
+        {["Primary Products", "SDKs"].map((groupName) => {
+          const groupProducts = typedProducts.filter(p => p.group === groupName);
+          if (groupProducts.length === 0) return null;
+
+          // Split by subgroup
+          const subgroups = Array.from(new Set(groupProducts.map(p => p.subgroup || "General")));
+
+          return (
+            <div key={groupName} className="space-y-12">
+              <div className="border-l-4 border-blue-600 pl-4">
+                <h2 className="text-3xl font-bold text-gray-900">{groupName}</h2>
+              </div>
+
+              <div className="space-y-16">
+                {subgroups.map(subgroupName => {
+                  const subProducts = groupProducts.filter(p => (p.subgroup || "General") === subgroupName);
+                  const isCore = subgroupName === "Talos Protocol Core";
+
+                  return (
+                    <div key={subgroupName} className="space-y-8">
+                      {subgroupName !== "General" && (
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-xl font-semibold text-gray-700">{subgroupName}</h3>
+                          {isCore && (
+                            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded text-[10px] uppercase font-bold tracking-tight">
+                              Open Source
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {subProducts.map((product) => (
+                          <ProductCard 
+                            key={product.id} 
+                            {...product} 
+                            github_url={product.repos[0]?.url}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
 
         {/* CTA Section */}
         <div className="mt-16 p-10 bg-gray-50 border border-gray-200 rounded-2xl text-center space-y-6">
