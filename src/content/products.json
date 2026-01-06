@@ -100,5 +100,107 @@
     "integrates_with": ["talos-gateway", "talos-audit-service"],
     "cta_primary": "Self-Host",
     "cta_secondary": "View Docs"
+  },
+  {
+    "id": "talos-audit-service",
+    "name": "Talos Audit Service",
+    "category": "Infrastructure",
+    "maturity": "Beta",
+    "tagline": "Immutable, tamper-evident logging and compliance microservice.",
+    "audience": "Compliance Officers & SREs",
+    "problem": "Lack of verifiable accountability in autonomous agent interactions.",
+    "outcome": "Merkle-tree anchored audit trails providing post-hoc verification and timing proofs.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-audit-service" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-audit-service/wiki",
+    "integrates_with": ["talos-gateway", "talos-dashboard"],
+    "cta_primary": "Setup Service",
+    "cta_secondary": "Audit Specs"
+  },
+  {
+    "id": "talos-mcp-connector",
+    "name": "Talos MCP Connector",
+    "category": "Infrastructure",
+    "maturity": "Stable",
+    "tagline": "The bridge between legacy Model Context Protocol servers and the Talos Network.",
+    "audience": "Tool Developers & Systems Integrators",
+    "problem": "Legacy MCP servers lacking the cryptographic security required for autonomous ecosystems.",
+    "outcome": "Instant, zero-code upgrade of existing MCP tools to secure Talos-compatible resources.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-mcp-connector" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-mcp-connector/wiki",
+    "integrates_with": ["talos-gateway", "talos-sdk-py", "talos-sdk-ts"],
+    "cta_primary": "Bridge Servers",
+    "cta_secondary": "View Source"
+  },
+  {
+    "id": "talos-sdk-java",
+    "name": "Java SDK",
+    "category": "SDKs",
+    "maturity": "Stable",
+    "tagline": "Enterprise-grade JVM implementation of the Talos Protocol.",
+    "audience": "Enterprise Developers & Architect",
+    "problem": "Integrating agentic security into large-scale, legacy Java/Kotlin ecosystems.",
+    "outcome": "Thread-safe, Spring-compatible security primitives for the enterprise JVM.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-java" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-java/wiki",
+    "integrates_with": ["talos-gateway", "talos-audit-service"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "Install"
+  },
+  {
+    "id": "talos-sdk-go",
+    "name": "Go SDK",
+    "category": "SDKs",
+    "maturity": "Alpha",
+    "tagline": "High-throughput, concurrent-safe implementation for cloud-native agents.",
+    "audience": "Infrastructure Engineers",
+    "problem": "Performance overhead in high-frequency agentic communication and trading.",
+    "outcome": "Lightning-fast secure sessions leveraging Go's native concurrency model.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-go" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-sdk-go/wiki",
+    "integrates_with": ["talos-gateway", "talos-mcp-connector"],
+    "cta_primary": "Get Started",
+    "cta_secondary": "View Alpha Source"
+  },
+  {
+    "id": "talos-aiops",
+    "name": "Secure DevOps Agent",
+    "category": "Applications",
+    "maturity": "Alpha",
+    "tagline": "Autonomous infrastructure automation secured by Talos.",
+    "audience": "DevOps & Platform Teams",
+    "problem": "Security risks of granting high-privilege credentials to autonomous agents.",
+    "outcome": "End-to-end secure automation of AWS, Kubernetes, and Terraform workflows.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-aiops" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-aiops/wiki",
+    "integrates_with": ["talos-gateway", "talos-dashboard"],
+    "cta_primary": "Deploy Agent",
+    "cta_secondary": "Learn More"
+  },
+  {
+    "id": "talos-ai-chat-agent",
+    "name": "Secure AI Chat",
+    "category": "Applications",
+    "maturity": "Stable",
+    "tagline": "Privacy-first chat application with end-to-end encryption.",
+    "audience": "Privacy-conscious Teams",
+    "problem": "Centralized chat platforms intercepting and analyzing private communications.",
+    "outcome": "Fully decentralized, DID-based encrypted messaging with immutable audit logs.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-ai-chat-agent" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-ai-chat-agent/wiki",
+    "integrates_with": ["talos-contracts", "talos-sdk-ts"],
+    "cta_primary": "Start Chatting",
+    "cta_secondary": "Security Model"
   }
 ]
