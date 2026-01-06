@@ -48,7 +48,7 @@
     "docs_url": "https://github.com/talosprotocol/talos-sdk-ts/wiki",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
     "cta_primary": "Get Started",
-    "cta_secondary": "NPM Package"
+    "cta_secondary": "Install from Source"
   },
   {
     "id": "talos-sdk-py",
@@ -64,8 +64,8 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos-sdk-py/wiki",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "PyPI Guide",
-    "cta_secondary": "GitHub"
+    "cta_primary": "Get Started",
+    "cta_secondary": "Install from Source"
   },
   {
     "id": "talos-gateway",
@@ -98,7 +98,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos-dashboard/wiki",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Live Demo",
-    "cta_secondary": "Self-host"
+    "cta_primary": "Self-Host",
+    "cta_secondary": "View Docs"
   }
 ]

@@ -41,18 +41,18 @@ export default function SecurityPage() {
                <p className="text-lg text-gray-600 leading-relaxed">
                  Traditional logging is insufficient for autonomous agents. Talos implements a &quot;Responsible Audit&quot; protocol where every action is anchored to a cryptographic proof.
                </p>
-               <ul className="space-y-3">
-                 {[
-                   "Merkle-tree anchored execution logs",
-                   "Hardware-backed secure enclaves (TEE) support",
-                   "Third-party verifiability without data leakage",
-                   "Real-time capability revocation"
-                 ].map((li) => (
-                   <li key={li} className="flex items-center gap-3 text-gray-800 font-medium">
-                      <span className="w-2 h-2 rounded-full bg-blue-600" />
-                      {li}
-                   </li>
-                 ))}
+                <ul className="space-y-3">
+                  {[
+                    "Append-only audit logs",
+                    "Third-party verifiability without data leakage",
+                    "Real-time capability revocation",
+                    "Ed25519 cryptographic signatures"
+                  ].map((li) => (
+                    <li key={li} className="flex items-center gap-3 text-gray-800 font-medium">
+                       <span className="w-2 h-2 rounded-full bg-blue-600" />
+                       {li}
+                    </li>
+                  ))}
                </ul>
             </div>
             <div className="p-10 bg-gray-50 border border-gray-200 rounded-2xl">

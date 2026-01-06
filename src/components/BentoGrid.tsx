@@ -48,7 +48,7 @@ export function BentoGrid() {
         />
         <BentoCard 
           title="Immutable Audit" 
-          description="Every capability check logged to a Merkle tree. Tamper-evident by design. Compliance-ready. Full incident response visibility."
+          description="Every capability check logged. Tamper-evident architecture. Compliance-ready. Full incident response visibility."
           icon={<FileSearch className="w-8 h-8 text-blue-600" />}
         />
       </div>

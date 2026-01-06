@@ -45,13 +45,13 @@ export default function Developers() {
             },
             { 
               title: "Capability Auth", 
-              desc: "Scoped, time-limited tokens for tool access. Fast-path local validation or slow-path blockchain anchoring.",
+              desc: "Scoped, time-limited tokens for tool access. Validated locally for millisecond latency.",
               code: "Resource + Action"
             },
             { 
               title: "Double Ratchet", 
               desc: "Forward-secure tunnels for every agent interaction. < 5ms RTT overhead on localhost.",
-              code: "Signal Protocol v3"
+              code: "X3DH + Double Ratchet"
             }
           ].map((item) => (
             <div key={item.title} className="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:border-blue-300 transition-all">
@@ -89,24 +89,61 @@ export default function Developers() {
                     </ul>
                 </div>
                 <div className="bg-gray-900 p-6 rounded-2xl border border-gray-700 font-mono text-sm text-gray-300 shadow-xl overflow-x-auto">
-<pre>{`import { Agent } from "@talos-network/sdk";
+<pre>{`# -------------------------------------------------------
+# OPTION 1: TypeScript (Install from Source)
+# -------------------------------------------------------
+git clone https://github.com/talosprotocol/talos-sdk-ts
+cd talos-sdk-ts && npm install && npm run build
 
-// Automatic DID generation
-const agent = await Agent.create();
+import { Wallet, Client } from "@talosprotocol/sdk";
 
-// Connect to secure gateway
-const session = await agent.connect(
-  "ws://gateway.talosprotocol.com"
-);
+const wallet = await Wallet.create();
+const cap = await wallet.signCapability({
+  resource: "tools:weather",
+  action: "execute",
+  expiresAt: Date.now() + 3600000
+});
 
-// Sign & Send capability request
-await session.sendSecure({
-  action: "compute:gpu_access",
-  resource: "cluster_alpha",
-  params: { duration: "1h" }
-});`}</pre>
+# -------------------------------------------------------
+# OPTION 2: Python (Install from Source)
+# -------------------------------------------------------
+git clone https://github.com/talosprotocol/talos-sdk-py
+cd talos-sdk-py && pip install -e .
+
+from talos_sdk import Wallet
+import time
+
+wallet = Wallet.create()
+# ... (rest of python example)
+print(f"Agent DID: {wallet.did}")
+
+cap = wallet.sign_capability({
+    "resource": "tools:weather",
+    "action": "execute",
+    "expires_at": time.time() + 3600
+})`}</pre>
                 </div>
             </div>
+
+            {/* Schema Docs Section */}
+            <div className="mt-16 border-t border-gray-200 pt-16">
+                <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Contract-First Schemas</h2>
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/EvidenceBundle" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <span className="block font-bold text-blue-600 mb-1">EvidenceBundle</span>
+                        <span className="text-sm text-gray-500">Audit Log Schema</span>
+                    </Link>
+                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/Redaction" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <span className="block font-bold text-blue-600 mb-1">Redaction</span>
+                        <span className="text-sm text-gray-500">Privacy Policy</span>
+                    </Link>
+                     <Link href="https://github.com/talosprotocol/talos-contracts/wiki/Capabilities" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <span className="block font-bold text-blue-600 mb-1">Capabilities</span>
+                        <span className="text-sm text-gray-500">Auth Token Spec</span>
+                    </Link>
+                </div>
+            </div>
+
          </div>
       </section>
 

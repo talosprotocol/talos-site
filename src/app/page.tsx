@@ -23,14 +23,14 @@ export default function Home() {
             © 2026 Talos Protocol. Open Source (MIT).
           </div>
           <div className="flex gap-6">
-             <Link href="https://github.com/orgs/talosprotocol/projects/2" target="_blank" className="text-sm text-slate-500 hover:text-slate-900">
+             <Link href="/roadmap" className="text-sm text-slate-500 hover:text-slate-900">
               Roadmap
             </Link>
              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-slate-500 hover:text-slate-900">
               GitHub
             </Link>
-            <Link href="https://github.com/talosprotocol/talos/wiki/Privacy" className="text-sm text-slate-500 hover:text-slate-900">
-              Privacy
+            <Link href="/security/disclosure" className="text-sm text-slate-500 hover:text-slate-900">
+              Security
             </Link>
           </div>
         </div>

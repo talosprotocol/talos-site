@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "validate:claims": "tsx src/lib/validate-claims.ts",
-    "check:links": "link-check http://localhost:3000"
+    "check:links": "linkinator http://localhost:3000 --recurse",
+    "test:routes": "node scripts/smoke-test-routes.js"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
@@ -25,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "link-check": "^5.5.1",
+    "linkinator": "^7.5.3",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"
