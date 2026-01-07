@@ -1,4 +1,4 @@
-const http = require('http');
+import http from 'node:http';
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
@@ -14,7 +14,7 @@ const ROUTES = [
   '/security/disclosure'
 ];
 
-async function checkRoute(route) {
+function checkRoute(route) {
   return new Promise((resolve) => {
     http.get(`${BASE_URL}${route}`, (res) => {
       if (res.statusCode === 200) {
@@ -31,23 +31,18 @@ async function checkRoute(route) {
   });
 }
 
-async function run() {
-  console.log(`Checking routes on ${BASE_URL}...`);
-  // Simple wait for server if needed, or assume it's running
-  
-  let failures = 0;
-  for (const route of ROUTES) {
-    const success = await checkRoute(route);
-    if (!success) failures++;
-  }
+console.log(`Checking routes on ${BASE_URL}...`);
 
-  if (failures > 0) {
-    console.error(`\nFAILED: ${failures} routes failed smoke test.`);
-    process.exit(1);
-  } else {
-    console.log('\nPASSED: All critical routes accessible.');
-    process.exit(0);
-  }
+let failures = 0;
+for (const route of ROUTES) {
+  const success = await checkRoute(route);
+  if (!success) failures++;
 }
 
-run();
+if (failures > 0) {
+  console.error(`\nFAILED: ${failures} routes failed smoke test.`);
+  process.exit(1);
+} else {
+  console.log('\nPASSED: All critical routes accessible.');
+  process.exit(0);
+}
