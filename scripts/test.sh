@@ -5,6 +5,7 @@
 
 if [ -f "package.json" ]; then
     echo "Running tests for talos-site..."
+    npm ci
     npm test
 else
     echo "talos-site not initialized. Skipping tests."
