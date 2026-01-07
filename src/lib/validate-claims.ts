@@ -11,7 +11,7 @@ const ClaimSchema = z.object({
   status: z.enum(['live', 'beta', 'planned']).optional().default('live'),
   
   // Verification
-  source_url: z.string().url({ message: 'Invalid URL' }).optional(),
+  source_url: z.url({ message: 'Invalid URL' }).optional(),
   metric_key: z.string().optional(),
   
   // Value (for metrics)
