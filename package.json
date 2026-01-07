@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "npm run lint && npm run build",
     "validate:claims": "tsx src/lib/validate-claims.ts",
     "check:links": "linkinator http://localhost:3000 --recurse",
     "test:routes": "node scripts/smoke-test-routes.js"
