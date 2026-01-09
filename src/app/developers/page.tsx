@@ -154,7 +154,7 @@ cap = wallet.sign_capability({
        <footer className="py-12 px-6 border-t border-gray-200">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-500">
-            © 2026 Talos Protocol. MIT Licensed.
+            © 2026 Talos Protocol. Apache 2.0 Licensed.
           </div>
           <div className="flex gap-6">
              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
