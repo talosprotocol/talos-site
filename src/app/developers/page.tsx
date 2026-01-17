@@ -36,7 +36,7 @@ export default function Developers() {
       {/* Primitives Grid */}
       <section className="px-6 py-20 max-w-6xl mx-auto border-t border-gray-200">
         <h2 className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-10">Core Primitives</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { 
               title: "Cryptographic Identity", 
@@ -50,8 +50,13 @@ export default function Developers() {
             },
             { 
               title: "Double Ratchet", 
-              desc: "Forward-secure tunnels for every agent interaction. < 5ms RTT overhead on localhost.",
+              desc: "Forward-secure tunnels for every agent interaction. 50k+ encryptions/sec.",
               code: "X3DH + Double Ratchet"
+            },
+            { 
+              title: "A2A Messaging", 
+              desc: "Phase 10: Agent-to-agent encrypted frames with replay detection and hash chains.",
+              code: "Session + Frame"
             }
           ].map((item) => (
             <div key={item.title} className="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:border-blue-300 transition-all">
@@ -128,7 +133,7 @@ cap = wallet.sign_capability({
             {/* Schema Docs Section */}
             <div className="mt-16 border-t border-gray-200 pt-16">
                 <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Contract-First Schemas</h2>
-                <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="grid md:grid-cols-4 gap-6 text-center">
                     <Link href="https://github.com/talosprotocol/talos-contracts/wiki/EvidenceBundle" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">EvidenceBundle</span>
                         <span className="text-sm text-gray-500">Audit Log Schema</span>
@@ -140,6 +145,10 @@ cap = wallet.sign_capability({
                      <Link href="https://github.com/talosprotocol/talos-contracts/wiki/Capabilities" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">Capabilities</span>
                         <span className="text-sm text-gray-500">Auth Token Spec</span>
+                    </Link>
+                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/A2A" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <span className="block font-bold text-blue-600 mb-1">A2A Channels</span>
+                        <span className="text-sm text-gray-500">Phase 10 Messaging</span>
                     </Link>
                 </div>
             </div>

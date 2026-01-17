@@ -24,5 +24,31 @@
     "notes": "Localhost loopback, p99",
     "risk_level": "low",
     "status": "live"
+  },
+  {
+    "id": "perf-ratchet-encrypt",
+    "claim": "Double Ratchet encryption at scale.",
+    "metric_key": "crypto.ratchet_encrypt.ops_sec",
+    "value": 50729,
+    "unit": "ops/sec",
+    "display_value": "50k+",
+    "scope": ["benchmark_strip"],
+    "source_url": "https://github.com/talosprotocol/talos-sdk-py/benchmarks/README.md",
+    "notes": "Python SDK, Session.encrypt(35B)",
+    "risk_level": "low",
+    "status": "live"
+  },
+  {
+    "id": "perf-canonical-json",
+    "claim": "Canonical JSON digest computation.",
+    "metric_key": "crypto.canonical_json.ops_sec",
+    "value": 2616860,
+    "unit": "ops/sec",
+    "display_value": "2.6M",
+    "scope": ["benchmark_strip"],
+    "source_url": "https://github.com/talosprotocol/talos-sdk-py/benchmarks/README.md",
+    "notes": "Python SDK, SHA256 + canonical serialization",
+    "risk_level": "low",
+    "status": "live"
   }
 ]
