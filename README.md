@@ -38,5 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## License
 
 Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
-
-Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
