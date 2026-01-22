@@ -72,6 +72,42 @@
     "cta_secondary": "View Source"
   },
   {
+    "id": "talos-ucp-connector",
+    "name": "Talos UCP Connector",
+    "group": "Primary Products",
+    "category": "Infrastructure",
+    "maturity": "Beta",
+    "tagline": "Enable AI Agents to transact securely on the Universal Commerce Protocol.",
+    "audience": "Commerce Integrators",
+    "problem": "AI Agents cannot safely perform financial transactions or negotiate with merchants.",
+    "outcome": "Policy-enforced, autonomous commerce with opaque payment handling.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-ucp-connector" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos-ucp-connector/wiki",
+    "integrates_with": ["talos-gateway", "talos-dashboard"],
+    "cta_primary": "Start Transacting",
+    "cta_secondary": "View Specs"
+  },
+  {
+    "id": "talos-setup-helper",
+    "name": "Talos Setup Agent",
+    "group": "Primary Products",
+    "category": "Tooling",
+    "maturity": "Beta",
+    "tagline": "Secure, local infrastructure bootstrapper for the Talos ecosystem.",
+    "audience": "System Administrators",
+    "problem": "Manual setup of cryptographic infrastructure is error-prone and insecure.",
+    "outcome": "One-click, verified deployment of local Talos stacks via the Dashboard.",
+    "repos": [
+      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos/tree/main/tools/setup-helper" }
+    ],
+    "docs_url": "https://github.com/talosprotocol/talos/tree/main/tools/setup-helper",
+    "integrates_with": ["talos-dashboard", "talos-contracts"],
+    "cta_primary": "Install Agent",
+    "cta_secondary": "View Recipes"
+  },
+  {
     "id": "talos-aiops",
     "name": "Secure DevOps Agent",
     "group": "Primary Products",

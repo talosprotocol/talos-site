@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { BentoGrid } from "@/components/BentoGrid";
 import { Architecture } from "@/components/Architecture";
 import { Benchmarks } from "@/components/Benchmarks";
+import { UCPFeature } from "@/components/UCPFeature";
 import { Navbar } from "@/components/Navbar";
 import Link from 'next/link';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <BentoGrid />
       <Architecture />
+      <UCPFeature />
       <Benchmarks />
 
       {/* Footer */}
