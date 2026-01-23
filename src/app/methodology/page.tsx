@@ -18,10 +18,10 @@ export default function Methodology() {
         <div className="prose prose-slate max-w-none mb-16">
           <h3>Test Environment</h3>
           <ul className="list-disc pl-5 space-y-2 text-slate-600">
-            <li><strong>Hardware:</strong> Apple M4 Max (16-core CPU), 64GB Unified Memory</li>
+            <li><strong>Hardware:</strong> Apple M4 Max (14-core CPU), 36GB Unified Memory</li>
             <li><strong>Network:</strong> Localhost loopback (127.0.0.1) for baseline latency</li>
-            <li><strong>OS:</strong> macOS Sequoia 15.2</li>
-            <li><strong>Implementation:</strong> <code>talos-core-rs</code> (v0.2.0) compiled with <code>--release</code></li>
+            <li><strong>OS:</strong> macOS Sequoia 15.2 (25.2.0)</li>
+            <li><strong>Implementation:</strong> <code>talos-core-rs</code> (v0.2.0/a639264d) compiled with <code>--release</code></li>
           </ul>
           
           <p className="mt-6">
