@@ -50,5 +50,18 @@
     "notes": "Python SDK, SHA256 + canonical serialization",
     "risk_level": "low",
     "status": "live"
+  },
+  {
+    "id": "perf-audit-ingest",
+    "claim": "Verified large-scale behavior modeling.",
+    "metric_key": "audit.ingest_volume.ops_sec",
+    "value": 100000,
+    "unit": "events/sec",
+    "display_value": "100k",
+    "scope": ["benchmark_strip"],
+    "source_url": "https://github.com/talosprotocol/talos/wiki/Benchmarks",
+    "notes": "Postgres persistent store, scaled verification",
+    "risk_level": "low",
+    "status": "live"
   }
 ]

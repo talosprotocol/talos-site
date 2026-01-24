@@ -18,14 +18,15 @@ export default function SecurityPage() {
       </section>
 
       {/* Security Pillars */}
-      <section className="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { icon: <Shield className="w-8 h-8"/>, title: "Identity", desc: "Every agent and human operator is backed by an Ed25519 DID. No passwords, no API keys, just proofs." },
           { icon: <Lock className="w-8 h-8"/>, title: "Encryption", desc: "End-to-end encrypted tunnels using Double Ratchet handshakes. Perfect forward secrecy for every tool call." },
           { icon: <Eye className="w-8 h-8"/>, title: "Auditability", desc: "Tamper-proof execution logs stored in cryptographic Merkle structures. Verifiable by external auditors." },
-          { icon: <AlertCircle className="w-8 h-8"/>, title: "Containment", desc: "Resource-level capability isolation. If an agent is compromised, the blast radius is strictly defined." }
+          { icon: <AlertCircle className="w-8 h-8"/>, title: "Containment", desc: "Resource-level capability isolation. If an agent is compromised, the blast radius is strictly defined." },
+          { icon: <Shield className="w-8 h-8"/>, title: "Behavioral Analysis", desc: "Advanced Markov Chain analysis of audit logs to detect anomalous agent behavior in real-time." }
         ].map((item) => (
-          <div key={item.title} className="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm space-y-4">
+          <div key={item.title} className="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm space-y-4 hover:border-blue-200 transition-colors">
             <div className="text-blue-600">{item.icon}</div>
             <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
             <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
@@ -39,14 +40,15 @@ export default function SecurityPage() {
             <div className="space-y-6">
                <h2 className="text-3xl font-bold text-gray-900">Responsible Audit</h2>
                <p className="text-lg text-gray-600 leading-relaxed">
-                 Traditional logging is insufficient for autonomous agents. Talos implements a &quot;Responsible Audit&quot; protocol where every action is anchored to a cryptographic proof.
+                 Traditional logging is insufficient for autonomous agents. Talos implements a &quot;Responsible Audit&quot; protocol where action patterns are analyzed at scale.
                </p>
                 <ul className="space-y-3">
                   {[
-                    "Append-only audit logs",
+                    "Append-only cryptographic audit logs",
+                    "Real-time Markov Chain behavioral modeling",
                     "Third-party verifiability without data leakage",
-                    "Real-time capability revocation",
-                    "Ed25519 cryptographic signatures"
+                    "Automated anomaly detection across 100k+ events",
+                    "Real-time capability revocation"
                   ].map((li) => (
                     <li key={li} className="flex items-center gap-3 text-gray-800 font-medium">
                        <span className="w-2 h-2 rounded-full bg-blue-600" />
@@ -59,7 +61,7 @@ export default function SecurityPage() {
                <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-6">Security Posture</h4>
                <div className="space-y-6">
                   <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                     <div className="h-full bg-blue-600 w-[98%]" />
+                     <div className="h-full bg-blue-600 w-[99%]" />
                   </div>
                   <div className="grid grid-cols-2 gap-6 text-center">
                     <div>
@@ -67,8 +69,12 @@ export default function SecurityPage() {
                       <p className="text-sm text-gray-500">Proof Integrity</p>
                     </div>
                     <div>
-                      <p className="text-gray-900 text-2xl font-bold mb-1">&lt; 2ms</p>
+                      <p className="text-gray-900 text-2xl font-bold mb-1">&lt; 1ms</p>
                       <p className="text-sm text-gray-500">Auth Latency</p>
+                    </div>
+                    <div className="col-span-2 pt-4 border-t border-gray-200">
+                      <p className="text-gray-900 text-2xl font-bold mb-1">100,000+</p>
+                      <p className="text-sm text-gray-500">Verified Audit Events/sec</p>
                     </div>
                   </div>
                </div>
