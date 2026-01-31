@@ -24,7 +24,7 @@ export default function Developers() {
             GitHub Repository
           </Link>
           <Link 
-            href="https://github.com/talosprotocol/talos/wiki"
+            href="https://github.com/talosprotocol/talos/tree/main/docs"
             target="_blank"
             className="px-6 py-3 text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-full hover:bg-gray-50 transition-colors"
           >

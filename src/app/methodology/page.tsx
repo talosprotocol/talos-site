@@ -25,7 +25,7 @@ export default function Methodology() {
           </ul>
           
           <p className="mt-6">
-            <Link href="https://github.com/talosprotocol/talos/wiki/Benchmarks" className="text-blue-600 hover:underline font-medium">
+            <Link href="https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md" className="text-blue-600 hover:underline font-medium">
               View full benchmark suite on GitHub &rarr;
             </Link>
           </p>

@@ -8,21 +8,21 @@ export default function SolutionsPage() {
       problem: "Agent tools operate in untrusted environments with risk of unauthorized access and capability drift.",
       outcome: "Talos provides a secure bridge between agents and MCP servers, enforcing cryptographic identity and time-scoped authorization on every request.",
       components: ["TypeScript SDK", "Python SDK", "MCP Connector", "Gateway"],
-      docs: "https://github.com/talosprotocol/talos/wiki/MCP-Integration"
+      docs: "https://github.com/talosprotocol/talos/blob/main/docs/features/integrations/mcp-integration.md"
     },
     {
       title: "Immutable Audit Trail",
       problem: "Autonomous agents execute thousands of actions per minute, making manual audit impossible.",
       outcome: "The Audit Service captures every execution event in a verifiable Merkle structure for compliance and incident response.",
       components: ["Audit Service", "Dashboard", "Contracts"],
-      docs: "https://github.com/talosprotocol/talos/wiki/Audit-Explorer"
+      docs: "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-explorer.md"
     },
     {
       title: "Cross-Language Parity",
       problem: "Building secure toolchains across Rust, Python, and Node.js leads to protocol fragmentation.",
       outcome: "Our contract-driven kernel ensures every SDK speaks the same cryptographic language with shared schemas and test vectors.",
       components: ["Contracts", "Core Rust", "All SDKs"],
-      docs: "https://github.com/talosprotocol/talos-contracts/wiki"
+      docs: "https://github.com/talosprotocol/talos/blob/main/docs/api/schemas.md"
     }
   ];
 
