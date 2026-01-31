@@ -134,19 +134,19 @@ cap = wallet.sign_capability({
             <div className="mt-16 border-t border-gray-200 pt-16">
                 <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Contract-First Schemas</h2>
                 <div className="grid md:grid-cols-4 gap-6 text-center">
-                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/EvidenceBundle" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <Link href="https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-scope.md" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">EvidenceBundle</span>
                         <span className="text-sm text-gray-500">Audit Log Schema</span>
                     </Link>
-                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/Redaction" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <Link href="https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-scope.md" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">Redaction</span>
                         <span className="text-sm text-gray-500">Privacy Policy</span>
                     </Link>
-                     <Link href="https://github.com/talosprotocol/talos-contracts/wiki/Capabilities" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                     <Link href="https://github.com/talosprotocol/talos/blob/main/docs/features/identity/agent-identity.md" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">Capabilities</span>
                         <span className="text-sm text-gray-500">Auth Token Spec</span>
                     </Link>
-                    <Link href="https://github.com/talosprotocol/talos-contracts/wiki/A2A" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <Link href="https://github.com/talosprotocol/talos/blob/main/docs/features/messaging/a2a-channels.md" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="block font-bold text-blue-600 mb-1">A2A Channels</span>
                         <span className="text-sm text-gray-500">Phase 10 Messaging</span>
                     </Link>

@@ -124,7 +124,7 @@ export default function ProductsPage() {
               <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
                GitHub
              </Link>
-             <Link href="https://github.com/talosprotocol/talos-docs/blob/main/WHITEPAPER.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+             <Link href="https://github.com/talosprotocol/talos/blob/main/docs/research/whitepaper.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
                Whitepaper
              </Link>
              <Link href="https://github.com/talosprotocol/talos/wiki" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">

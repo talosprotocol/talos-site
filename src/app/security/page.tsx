@@ -88,7 +88,7 @@ export default function SecurityPage() {
            <div className="text-sm text-gray-500">© 2026 Talos Protocol Security Group</div>
            <div className="flex gap-6">
               <Link href="mailto:security@talosprotocol.com" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Report Vulnerability</Link>
-              <Link href="https://github.com/talosprotocol/talos/wiki/Security-Whitepaper" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Whitepaper</Link>
+              <Link href="https://github.com/talosprotocol/talos/blob/main/docs/security/security-properties.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Whitepaper</Link>
            </div>
         </div>
       </footer>
