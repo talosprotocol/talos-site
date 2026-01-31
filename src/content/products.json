@@ -33,7 +33,12 @@
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/security/security-dashboard.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
     "cta_primary": "Self-Host",
-    "cta_secondary": "View Docs"
+    "cta_secondary": "View Docs",
+    "feature_spotlight": {
+      "title": "AI Configuration Assistant",
+      "description": "Natural language to infrastructure configuration. Just ask Talos to 'rotate keys every 24h' and watch the policy generate automatically.",
+      "badge": "MVP Feature"
+    }
   },
   {
     "id": "talos-audit-service",

@@ -70,6 +70,27 @@ export default async function ProductDetailPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Feature Spotlight */}
+      {product.feature_spotlight && (
+        <section className="py-8 px-6 max-w-6xl mx-auto">
+           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 sm:p-12 text-white overflow-hidden relative">
+              <div className="relative z-10 max-w-2xl">
+                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs font-bold uppercase mb-6">
+                    <Zap className="w-3 h-3 text-yellow-300" />
+                    {product.feature_spotlight.badge}
+                 </div>
+                 <h3 className="text-3xl font-bold mb-4">
+                    {product.feature_spotlight.title}
+                 </h3>
+                 <p className="text-blue-100 text-lg leading-relaxed">
+                    {product.feature_spotlight.description}
+                 </p>
+              </div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+           </div>
+        </section>
+      )}
+
       {/* Details Grid */}
       <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-200 grid md:grid-cols-3 gap-10">
          {[
