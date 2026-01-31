@@ -81,7 +81,7 @@ export default function SolutionsPage() {
                 View Documentation
               </Link>
               <Link 
-                href="mailto:contact@talosprotocol.com"
+                href="mailto:reach@talosprotocol.com"
                 className="px-5 py-2.5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
               >
                 Request Demo

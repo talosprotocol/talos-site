@@ -30,7 +30,7 @@ export function Hero() {
             Get Started
           </Link>
           <a 
-            href="mailto:contact@talosprotocol.com?subject=Talos%20Protocol%20Inquiry"
+            href="mailto:reach@talosprotocol.com?subject=Talos%20Protocol%20Inquiry"
             className="px-8 py-4 text-lg font-medium text-blue-600 bg-transparent border-2 border-blue-200 rounded-full hover:bg-blue-50 transition-colors"
           >
             Contact Sales

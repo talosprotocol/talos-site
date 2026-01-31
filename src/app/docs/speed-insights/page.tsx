@@ -332,7 +332,7 @@ const { title, description } = Astro.props;
             <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               GitHub
             </Link>
-            <Link href="mailto:contact@talosprotocol.com" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+            <Link href="mailto:reach@talosprotocol.com" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               Contact
             </Link>
           </div>

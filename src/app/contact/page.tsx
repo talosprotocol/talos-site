@@ -25,8 +25,8 @@ export default function Contact() {
                 <p className="text-slate-500 mb-6">
                     For partnerships, media, and general questions.
                 </p>
-                <Link href="mailto:contact@talosprotocol.com" className="text-blue-600 font-semibold hover:underline">
-                    contact@talosprotocol.com
+                <Link href="mailto:reach@talosprotocol.com" className="text-blue-600 font-semibold hover:underline">
+                    reach@talosprotocol.com
                 </Link>
             </div>
 
