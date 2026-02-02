@@ -48,12 +48,12 @@ export default function ServicesPage() {
             cta="Talk to Engineering"
           />
           <ServiceCard 
-            title="Enterprise"
-            description="Mission-critical support and security response for enterprises deploying agents at scale."
+            title="Governance"
+            description="Mission-critical security governance and direct engineering support for organizations deploying autonomous agents at scale."
             deliverables={[
               "24/7 Priority SLA support",
               "Dedicated technical lead",
-              "Security patch guidance",
+              "Sovereign roadmap alignment",
               "Custom feature priority"
             ]}
             engagement="Annual Partnership"
