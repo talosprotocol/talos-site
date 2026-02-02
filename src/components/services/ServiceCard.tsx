@@ -25,11 +25,7 @@ export function ServiceCard({
         ? "bg-white border-blue-200 shadow-lg ring-1 ring-blue-100" 
         : "bg-white border-gray-200"
     }`}>
-      {featured && (
-        <span className="self-start px-3 py-1 mb-4 text-xs font-semibold text-blue-600 bg-blue-50 rounded-full">
-          Most Popular
-        </span>
-      )}
+
       
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{ordinal}</span>
