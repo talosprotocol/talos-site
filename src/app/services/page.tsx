@@ -1,8 +1,58 @@
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/services/ServiceCard";
-import Link from 'next/link';
+import { Footer } from "@/components/Footer";
 
 export default function ServicesPage() {
+  const tiers = [
+    {
+      id: "advisory",
+      ordinal: "Tier 1 of 3",
+      title: "Advisory",
+      description: "Threat model and architecture review for secure agent deployments.",
+      deliverables: [
+        "Architecture security audit",
+        "Custom threat model report",
+        "Implementation roadmap",
+        "Policy & compliance mapping"
+      ],
+      engagement: "2-4 Weeks",
+      cta: "Book Advisory Call",
+      featured: false
+    },
+    {
+      id: "implementation",
+      ordinal: "Tier 2 of 3",
+      title: "Implementation",
+      description: "You ship a hardened Talos stack in your environment.",
+      additive_summary: "Includes Advisory + deployment and hardening",
+      deliverables: [
+        "Production Gateway setup",
+        "Custom MCP Connector build",
+        "SDK integration support",
+        "Sovereign host hardening"
+      ],
+      engagement: "4-12 Weeks",
+      cta: "Talk to Engineering",
+      featured: true
+    },
+    {
+      id: "assurance",
+      ordinal: "Tier 3 of 3",
+      title: "Assurance",
+      description: "Mission-critical operations with accountable security ownership.",
+      additive_summary: "Includes Implementation + SLA, incident response, and dedicated lead",
+      deliverables: [
+        "Priority SLAs and escalation paths",
+        "Dedicated technical lead",
+        "Sovereign roadmap alignment",
+        "Ongoing governance & reviews"
+      ],
+      engagement: "Annual Partnership",
+      cta: "Inquire about Assurance",
+      featured: false
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -20,45 +70,28 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-16 px-6 max-w-6xl mx-auto space-y-8">
+        {/* Additive Banner */}
+        <div className="max-w-3xl mx-auto p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
+            <p className="text-sm font-semibold text-blue-900">
+                Tiers are additive. <span className="font-normal text-blue-800">Implementation includes Advisory. Assurance includes Implementation.</span>
+            </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <ServiceCard 
-            title="Advisory"
-            description="High-level architecture review and threat modeling for existing and new agent toolchains."
-            deliverables={[
-              "Architecture security audit",
-              "Custom threat model report",
-              "Implementation roadmap",
-              "Policy & compliance mapping"
-            ]}
-            engagement="2-4 Weeks"
-            cta="Book Discovery"
-          />
-          <ServiceCard 
-            featured={true}
-            title="Implementation"
-            description="Deep engineering support to deploy and harden the Talos stack within your sovereign infrastructure."
-            deliverables={[
-              "Production Gateway setup",
-              "Custom MCP Connector build",
-              "SDK integration support",
-              "Sovereign host hardening"
-            ]}
-            engagement="4-12 Weeks"
-            cta="Talk to Engineering"
-          />
-          <ServiceCard 
-            title="Governance"
-            description="Mission-critical security governance and direct engineering support for organizations deploying autonomous agents at scale."
-            deliverables={[
-              "24/7 Priority SLA support",
-              "Dedicated technical lead",
-              "Sovereign roadmap alignment",
-              "Custom feature priority"
-            ]}
-            engagement="Annual Partnership"
-            cta="Inquire Tiers"
-          />
+          {tiers.map((tier) => (
+            <ServiceCard 
+              key={tier.id}
+              title={tier.title}
+              description={tier.description}
+              deliverables={tier.deliverables}
+              engagement={tier.engagement}
+              cta={tier.cta}
+              featured={tier.featured}
+              ordinal={tier.ordinal}
+              additive_summary={tier.additive_summary}
+            />
+          ))}
         </div>
       </section>
 
@@ -81,22 +114,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 px-6 border-t border-gray-200 mt-16">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-gray-500">
-            © 2026 Talos Protocol. Apache 2.0 Licensed.
-          </div>
-          <div className="flex gap-6">
-             <Link href="/" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-             <Link href="/products" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-              Products
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

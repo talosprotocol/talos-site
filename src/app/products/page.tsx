@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { ProductCard } from "@/components/products/ProductCard";
+import { Footer } from "@/components/Footer";
 import products from "@/content/products.json";
 import Link from 'next/link';
 
@@ -109,30 +110,12 @@ export default function ProductsPage() {
             href="/services" 
             className="inline-flex px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Explore Services
+            Start with Advisory
           </Link>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 px-6 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-gray-500">
-            © 2026 Talos Protocol. Apache 2.0 Licensed.
-          </div>
-          <div className="flex gap-6">
-              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-               GitHub
-             </Link>
-             <Link href="https://github.com/talosprotocol/talos/blob/main/docs/research/whitepaper.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-               Whitepaper
-             </Link>
-             <Link href="https://github.com/talosprotocol/talos/tree/main/docs" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-               Docs
-             </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

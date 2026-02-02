@@ -5,6 +5,8 @@ interface ServiceCardProps {
   engagement: string;
   cta: string;
   featured?: boolean;
+  ordinal: string;
+  additive_summary?: string;
 }
 
 export function ServiceCard({
@@ -14,6 +16,8 @@ export function ServiceCard({
   engagement,
   cta,
   featured = false,
+  ordinal,
+  additive_summary,
 }: Readonly<ServiceCardProps>) {
   return (
     <div className={`flex flex-col p-8 rounded-2xl border transition-all duration-300 h-full ${
@@ -26,10 +30,21 @@ export function ServiceCard({
           Most Popular
         </span>
       )}
+      
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{ordinal}</span>
+      </div>
+
       <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
 
       <div className="flex-grow space-y-4 mb-8">
+        {additive_summary && (
+          <div className="p-3 bg-blue-50/50 border border-blue-100 rounded-lg text-sm text-blue-800 font-medium mb-4">
+             {additive_summary}
+          </div>
+        )}
+
         <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">Key Deliverables</p>
         <ul className="space-y-3">
           {deliverables.map((item) => (
