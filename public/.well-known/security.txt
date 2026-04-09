@@ -1,5 +1,5 @@
-Contact: security@talosprotocol.com
-Expires: 2026-12-31T23:59:00.000Z
+Contact: mailto:security@talosprotocol.com
+Expires: 2027-01-01T00:00:00.000Z
 Preferred-Languages: en
-Policy: https://talosprotocol.com/security/disclosure
-Source: https://github.com/talosprotocol/talos
+Canonical: https://talosprotocol.com/.well-known/security.txt
+Policy: https://github.com/talosprotocol/talos/blob/main/SECURITY.md

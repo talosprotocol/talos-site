@@ -31,8 +31,8 @@ export default function Home() {
              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-slate-500 hover:text-slate-900">
               GitHub
             </Link>
-             <Link href="https://github.com/talosprotocol/talos/blob/main/docs/research/whitepaper.md" className="text-sm text-slate-500 hover:text-slate-900">
-              Whitepaper
+             <Link href="/docs" className="text-sm text-slate-500 hover:text-slate-900">
+              Docs
             </Link>
             <Link href="/security/disclosure" className="text-sm text-slate-500 hover:text-slate-900">
               Security

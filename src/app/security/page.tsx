@@ -1,8 +1,11 @@
 import { Navbar } from "@/components/Navbar";
 import Link from 'next/link';
 import { Shield, Lock, Eye, AlertCircle } from 'lucide-react';
+import claims from '@/content/claims.json';
 
 export default function SecurityPage() {
+  const getClaim = (id: string) => claims.find(c => c.id === id)?.display_value;
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -20,11 +23,11 @@ export default function SecurityPage() {
       {/* Security Pillars */}
       <section className="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { icon: <Shield className="w-8 h-8"/>, title: "Identity", desc: "Every agent and human operator is backed by an Ed25519 DID. No passwords, no API keys, just proofs." },
-          { icon: <Lock className="w-8 h-8"/>, title: "Encryption", desc: "End-to-end encrypted tunnels using Double Ratchet handshakes. Perfect forward secrecy for every tool call." },
+          { icon: <Shield className="w-8 h-8"/>, title: "Identity", desc: "Identity backed by Ed25519 DIDs. Secure access via Passkeys and cryptographic proofs." },
+          { icon: <Lock className="w-8 h-8"/>, title: "Encryption", desc: "End-to-end encrypted tunnels using Double Ratchet handshakes. Perfect forward secrecy for core protocol traffic." },
           { icon: <Eye className="w-8 h-8"/>, title: "Auditability", desc: "Tamper-proof execution logs stored in cryptographic Merkle structures. Verifiable by external auditors." },
           { icon: <AlertCircle className="w-8 h-8"/>, title: "Containment", desc: "Resource-level capability isolation. If an agent is compromised, the blast radius is strictly defined." },
-          { icon: <Shield className="w-8 h-8"/>, title: "Behavioral Analysis", desc: "Advanced Markov Chain analysis of audit logs to detect anomalous agent behavior in real-time." }
+          { icon: <Shield className="w-8 h-8"/>, title: "Behavioral Analysis", desc: "Markov Chain analysis of audit logs for behavioral anomaly detection." }
         ].map((item) => (
           <div key={item.title} className="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm space-y-4 hover:border-blue-200 transition-colors">
             <div className="text-blue-600">{item.icon}</div>
@@ -45,9 +48,9 @@ export default function SecurityPage() {
                 <ul className="space-y-3">
                   {[
                     "Append-only cryptographic audit logs",
-                    "Real-time Markov Chain behavioral modeling",
+                    "Markov Chain behavioral modeling",
                     "Third-party verifiability without data leakage",
-                    "Automated anomaly detection across 100k+ events",
+                    "Automated anomaly detection for high-volume logs",
                     "Real-time capability revocation"
                   ].map((li) => (
                     <li key={li} className="flex items-center gap-3 text-gray-800 font-medium">
@@ -65,16 +68,16 @@ export default function SecurityPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-6 text-center">
                     <div>
-                      <p className="text-gray-900 text-2xl font-bold mb-1">99.9%</p>
+                      <p className="text-gray-900 text-2xl font-bold mb-1">{getClaim('perf-proof-integrity') || '100%'}</p>
                       <p className="text-sm text-gray-500">Proof Integrity</p>
                     </div>
                     <div>
-                      <p className="text-gray-900 text-2xl font-bold mb-1">&lt; 1ms</p>
+                      <p className="text-gray-900 text-2xl font-bold mb-1">{getClaim('perf-auth-latency') || '< 1.5ms'}</p>
                       <p className="text-sm text-gray-500">Auth Latency</p>
                     </div>
                     <div className="col-span-2 pt-4 border-t border-gray-200">
-                      <p className="text-gray-900 text-2xl font-bold mb-1">100,000+</p>
-                      <p className="text-sm text-gray-500">Verified Audit Events/sec</p>
+                      <p className="text-gray-900 text-2xl font-bold mb-1">{getClaim('perf-audit-ingest') || '12k'}/sec</p>
+                      <p className="text-sm text-gray-500">Verified Audit Events</p>
                     </div>
                   </div>
                </div>
@@ -88,7 +91,8 @@ export default function SecurityPage() {
            <div className="text-sm text-gray-500">© 2026 Talos Protocol Security Group</div>
            <div className="flex gap-6">
               <Link href="mailto:security@talosprotocol.com" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Report Vulnerability</Link>
-              <Link href="https://github.com/talosprotocol/talos/blob/main/docs/security/security-properties.md" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Whitepaper</Link>
+              <Link href="/docs" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Docs</Link>
+              <Link href="/protocol" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Whitepaper</Link>
            </div>
         </div>
       </footer>

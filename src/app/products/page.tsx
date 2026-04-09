@@ -88,7 +88,6 @@ export default function ProductsPage() {
                           <ProductCard 
                             key={product.id} 
                             {...product} 
-                            github_url={product.repos[0]?.url}
                           />
                         ))}
                       </div>

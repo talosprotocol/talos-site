@@ -10,12 +10,12 @@
     "problem": "Unmonitored agent-to-tool communication and lack of audit trails.",
     "outcome": "Unified control plane for all agentic interactions with centralized logging.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-gateway" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ai-gateway" }
     ],
-    "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/architecture/infrastructure.md",
+    "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/guides/deployment.md",
     "integrates_with": ["talos-audit-service", "talos-dashboard"],
-    "cta_primary": "Deployment Guide",
-    "cta_secondary": "API Specs"
+    "cta_primary": "View API Docs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-dashboard",
@@ -28,12 +28,12 @@
     "problem": "Opaque agent operations making incident response difficult.",
     "outcome": "Real-time visibility into audit logs, capability usage, and system health.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-dashboard" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/site/dashboard" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/security/security-dashboard.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Self-Host",
-    "cta_secondary": "View Docs",
+    "cta_primary": "Setup Dashboard",
+    "cta_secondary": "View Source",
     "feature_spotlight": {
       "title": "AI Configuration Assistant",
       "description": "Natural language to infrastructure configuration. Just ask Talos to 'rotate keys every 24h' and watch the policy generate automatically.",
@@ -51,12 +51,12 @@
     "problem": "Lack of verifiable accountability in autonomous agent interactions.",
     "outcome": "Merkle-tree anchored audit trails providing post-hoc verification and timing proofs.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-audit-service" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/audit" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-scope.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Setup Service",
-    "cta_secondary": "Audit Specs"
+    "cta_primary": "Audit Docs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-mcp-connector",
@@ -69,11 +69,11 @@
     "problem": "Legacy MCP servers lacking the cryptographic security required for autonomous ecosystems.",
     "outcome": "Instant, zero-code upgrade of existing MCP tools to secure Talos-compatible resources.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-mcp-connector" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/mcp-connector" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-sdk-py", "talos-sdk-ts"],
-    "cta_primary": "Bridge Servers",
+    "cta_primary": "Connector Guide",
     "cta_secondary": "View Source"
   },
   {
@@ -87,12 +87,12 @@
     "problem": "AI Agents cannot safely perform financial transactions or negotiate with merchants.",
     "outcome": "Policy-enforced, autonomous commerce with opaque payment handling.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-ucp-connector" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ucp-connector" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Start Transacting",
-    "cta_secondary": "View Specs"
+    "cta_primary": "Commerce Specs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-setup-helper",
@@ -105,30 +105,30 @@
     "problem": "Manual setup of cryptographic infrastructure is error-prone and insecure.",
     "outcome": "One-click, verified deployment of local Talos stacks via the Dashboard.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos/tree/main/tools/setup-helper" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/tools/setup-helper" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/getting-started/quickstart.md",
     "integrates_with": ["talos-dashboard", "talos-contracts"],
-    "cta_primary": "Install Agent",
-    "cta_secondary": "View Recipes"
+    "cta_primary": "Quickstart Guide",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-aiops",
     "name": "Secure DevOps Agent",
     "group": "Primary Products",
     "category": "Applications",
-    "maturity": "Alpha",
+    "maturity": "Beta",
     "tagline": "Autonomous infrastructure automation secured by Talos.",
     "audience": "DevOps & Platform Teams",
     "problem": "Security risks of granting high-privilege credentials to autonomous agents.",
     "outcome": "End-to-end secure automation of AWS, Kubernetes, and Terraform workflows.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-aiops" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/aiops" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/observability.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Deploy Agent",
-    "cta_secondary": "Learn More"
+    "cta_primary": "Automation Guide",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-ai-chat-agent",
@@ -141,12 +141,12 @@
     "problem": "Centralized chat platforms intercepting and analyzing private communications.",
     "outcome": "Fully decentralized, DID-based encrypted messaging with immutable audit logs.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-ai-chat-agent" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ai-chat-agent" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/examples.md",
     "integrates_with": ["talos-contracts", "talos-sdk-ts"],
-    "cta_primary": "Start Chatting",
-    "cta_secondary": "Security Model"
+    "cta_primary": "Chat Examples",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-contracts",
@@ -160,12 +160,12 @@
     "problem": "Fragmented security schemas across multiple languages and services.",
     "outcome": "Strict, contract-driven interoperability and deterministic verification.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-contracts" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/contracts" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/api/schemas.md",
     "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
-    "cta_primary": "Explore Schemas",
-    "cta_secondary": "View on GitHub"
+    "cta_primary": "View Schemas",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-core-rs",
@@ -179,11 +179,11 @@
     "problem": "Performance bottlenecks in cryptographic operations and encoding.",
     "outcome": "Blazing fast, memory-safe kernel wedge for critical security paths.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-core-rs" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/core" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/architecture/overview.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Performance Specs",
+    "cta_primary": "Architecture Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -197,12 +197,12 @@
     "problem": "Complex cryptographic workflows taxing frontend and backend developers.",
     "outcome": "Seamless, type-safe integration of Talos primitives into JS/TS apps.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-ts" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/typescript" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/typescript-sdk.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install from Source"
+    "cta_primary": "TS SDK Docs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-sdk-py",
@@ -215,12 +215,12 @@
     "problem": "Lack of security primitives in mainstream AI agent frameworks.",
     "outcome": "Native integration with LangChain, AutoGPT, and custom AI toolchains.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-py" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/python" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/python-sdk.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install from Source"
+    "cta_primary": "Python SDK Docs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-sdk-java",
@@ -233,29 +233,29 @@
     "problem": "Integrating agentic security into large-scale, sovereign Java/Kotlin ecosystems.",
     "outcome": "Thread-safe, Spring-compatible security primitives for production JVM environments.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-java" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/java" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "Install"
+    "cta_primary": "Java SDK Docs",
+    "cta_secondary": "View Source"
   },
   {
     "id": "talos-sdk-go",
     "name": "Go SDK",
     "group": "SDKs",
     "category": "SDKs",
-    "maturity": "Alpha",
+    "maturity": "Beta",
     "tagline": "High-throughput, concurrent-safe implementation for cloud-native agents.",
     "audience": "Infrastructure Engineers",
     "problem": "Performance overhead in high-frequency agentic communication and trading.",
     "outcome": "Lightning-fast secure sessions leveraging Go's native concurrency model.",
     "repos": [
-      { "label": "GitHub", "url": "https://github.com/talosprotocol/talos-sdk-go" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/go" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Get Started",
-    "cta_secondary": "View Alpha Source"
+    "cta_primary": "Go SDK Docs",
+    "cta_secondary": "View Source"
   }
 ]

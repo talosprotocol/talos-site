@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import products from "@/content/products.json";
-import { notFound } from "next/navigation";
+
+import { notFound } from 'next/navigation';
 import Link from "next/link";
 import { ChevronRight, ExternalLink, Shield, Cpu, Zap } from "lucide-react";
 

@@ -24,8 +24,7 @@ export default function Developers() {
             GitHub Repository
           </Link>
           <Link 
-            href="https://github.com/talosprotocol/talos/tree/main/docs"
-            target="_blank"
+            href="/docs"
             className="px-6 py-3 text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-full hover:bg-gray-50 transition-colors"
           >
             Documentation Wiki
@@ -93,40 +92,42 @@ export default function Developers() {
                         ))}
                     </ul>
                 </div>
-                <div className="bg-gray-900 p-6 rounded-2xl border border-gray-700 font-mono text-sm text-gray-300 shadow-xl overflow-x-auto">
-<pre>{`# -------------------------------------------------------
-# OPTION 1: TypeScript (Install from Source)
+                <div className="bg-gray-900 p-6 rounded-2xl border border-gray-700 font-mono text-sm text-gray-300 shadow-xl overflow-x-auto whitespace-pre">
+{`// -------------------------------------------------------
+// TypeScript: Secure MCP Client
+// -------------------------------------------------------
+import { Wallet, TalosClient } from "@talosprotocol/sdk";
+
+const wallet = Wallet.generate("my-agent");
+const client = new TalosClient("http://gateway.talos.network", wallet);
+
+await client.connect();
+
+// Sign and send a secure MCP request
+const response = await client.signAndSendMcp(
+  { data: "payload" },
+  "weather-service",
+  "execute"
+);
+
+console.log(\`Agent DID: \${wallet.toDid()}\`);
+
 # -------------------------------------------------------
-git clone https://github.com/talosprotocol/talos-sdk-ts
-cd talos-sdk-ts && npm install && npm run build
-
-import { Wallet, Client } from "@talosprotocol/sdk";
-
-const wallet = await Wallet.create();
-const cap = await wallet.signCapability({
-  resource: "tools:weather",
-  action: "execute",
-  expiresAt: Date.now() + 3600000
-});
-
+# Python: Secure MCP Client
 # -------------------------------------------------------
-# OPTION 2: Python (Install from Source)
-# -------------------------------------------------------
-git clone https://github.com/talosprotocol/talos-sdk-py
-cd talos-sdk-py && pip install -e .
+from talos import Wallet, TalosClient
 
-from talos_sdk import Wallet
-import time
+wallet = Wallet.generate("my-agent")
+client = await TalosClient.create(wallet)
 
-wallet = Wallet.create()
-# ... (rest of python example)
-print(f"Agent DID: {wallet.did}")
+# Sign and send a secure MCP request
+response = await client.sign_and_send_mcp(
+    {"data": "payload"},
+    "weather-service",
+    "execute"
+)
 
-cap = wallet.sign_capability({
-    "resource": "tools:weather",
-    "action": "execute",
-    "expires_at": time.time() + 3600
-})`}</pre>
+print(f"Agent DID: {wallet.to_did()}")`}
                 </div>
             </div>
 
@@ -166,11 +167,14 @@ cap = wallet.sign_capability({
             © 2026 Talos Protocol. Apache 2.0 Licensed.
           </div>
           <div className="flex gap-6">
+             <Link href="/docs" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+              Docs
+            </Link>
+             <Link href="/protocol" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
+              Whitepaper
+            </Link>
              <Link href="https://github.com/talosprotocol/talos" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
               GitHub
-            </Link>
-             <Link href="mailto:reach@talosprotocol.com" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">
-              Contact
             </Link>
           </div>
         </div>

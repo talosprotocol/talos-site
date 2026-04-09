@@ -17,9 +17,10 @@ export function Navbar() {
   ];
 
   const rightLinks = [
-    { href: '/developers', label: 'Developers' },
+    { href: '/roadmap', label: 'Roadmap' },
     { href: '/security', label: 'Security' },
-    { href: 'https://github.com/talosprotocol/talos-docs/blob/main/research/whitepaper.md', label: 'Whitepaper' },
+    { href: '/docs', label: 'Docs' },
+    { href: '/protocol', label: 'Whitepaper' },
   ];
 
   return (

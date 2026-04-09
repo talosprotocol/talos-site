@@ -5,6 +5,9 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
 const nextConfig: NextConfig = {
   output: 'export',
+  turbopack: {
+    root: process.cwd(),
+  },
   // Only set basePath if configuring for GitHub Pages deployment
   basePath: isGithubActions ? '/talos' : undefined,
   images: {
