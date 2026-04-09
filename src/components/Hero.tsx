@@ -22,13 +22,7 @@ export function Hero() {
         
         <div className="flex flex-wrap justify-center gap-4 pt-6">
           <Link 
-<<<<<<< HEAD
-            href="https://github.com/talosprotocol/talos/wiki"
-            target="_blank"
-            rel="noopener noreferrer"
-=======
             href="/docs"
->>>>>>> d0f7a9b (Standardize protocol implementation and fix production gate violations)
             className="px-8 py-4 text-lg font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
           >
             Get Started
