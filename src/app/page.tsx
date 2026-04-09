@@ -19,22 +19,22 @@ export default function Home() {
       <Benchmarks />
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-sm text-slate-500">
+      <footer className="py-12 px-6 border-t border-slate-200 bg-slate-50">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-sm font-medium text-slate-500">
             © 2026 Talos Protocol. Open Source (Apache-2.0).
           </div>
           <div className="flex gap-6">
-             <Link href="/roadmap" className="text-sm text-slate-500 hover:text-slate-900">
+             <Link href="/roadmap" className="text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
               Roadmap
             </Link>
-             <Link href="https://github.com/talosprotocol/talos" className="text-sm text-slate-500 hover:text-slate-900">
+             <Link href="https://github.com/talosprotocol/talos" className="text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
               GitHub
             </Link>
-             <Link href="/docs" className="text-sm text-slate-500 hover:text-slate-900">
+             <Link href="/docs" className="text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
               Docs
             </Link>
-            <Link href="/security/disclosure" className="text-sm text-slate-500 hover:text-slate-900">
+            <Link href="/security/disclosure" className="text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
               Security
             </Link>
           </div>

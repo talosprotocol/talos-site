@@ -1,120 +1,105 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 
 export function Navbar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: '/products', label: 'Products' },
-    { href: '/services', label: 'Services' },
-    { href: '/solutions', label: 'Solutions' },
-  ];
-
-  const rightLinks = [
-    { href: '/roadmap', label: 'Roadmap' },
-    { href: '/security', label: 'Security' },
-    { href: '/docs', label: 'Docs' },
-    { href: '/protocol', label: 'Whitepaper' },
-  ];
+  const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-1 bg-gray-100">
-              <Image 
-                src="/assets/logo-dark.png" 
-                alt="Talos Protocol" 
-                width={24} 
-                height={24}
-                className="object-contain"
-                priority
-              />
-            </div>
-            <span className="font-bold text-gray-900 text-base sm:text-lg tracking-tight uppercase hidden sm:block">Talos Protocol</span>
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center h-16">
+          
+          <Link href="/" className="flex items-center gap-2 group">
+            <Shield className="w-6 h-6 text-slate-800 group-hover:text-slate-600 transition-colors" />
+            <span className="text-xl font-black tracking-tight text-slate-900">TALOS</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          <div className="hidden md:flex items-center space-x-8">
+            {[
+              { label: 'Products', path: '/products' },
+              { label: 'Services', path: '/services' },
+              { label: 'Developers', path: '/developers' },
+              { label: 'Docs', path: '/docs' }
+            ].map((item) => (
               <Link 
-                key={link.href}
-                href={link.href} 
-                className={`text-sm font-medium transition-colors ${
-                  pathname === link.href ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
+                key={item.path} 
+                href={item.path} 
+                className={`text-sm font-semibold transition-colors ${
+                  isActive(item.path) 
+                    ? 'text-slate-900' 
+                    : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
-                {link.label}
+                {item.label}
               </Link>
             ))}
           </div>
 
-          {/* Desktop Right Links */}
-          <div className="hidden md:flex items-center gap-6">
-            {rightLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-                className={`text-sm font-medium transition-colors ${
-                  pathname === link.href ? 'text-blue-600' : 'text-gray-800 hover:text-gray-900'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center space-x-4">
             <Link 
-              href="https://github.com/talosprotocol/talos" 
-              target="_blank" 
-              className="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all"
+              href="/contact" 
+              className="text-sm font-bold text-slate-600 hover:text-slate-900 px-4 py-2 transition-colors"
             >
-              GitHub
+              Contact
+            </Link>
+            <Link 
+              href="/docs" 
+              className="px-5 py-2 text-sm font-bold text-white bg-slate-900 rounded-full shadow-sm hover:bg-slate-800 transition-all transform hover:-translate-y-0.5"
+            >
+              Get Started
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+          <button 
+            className="md:hidden p-2 text-slate-600"
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-4 py-4 space-y-3">
-            {[...navLinks, ...rightLinks].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block py-2 text-base font-medium ${
-                  pathname === link.href ? 'text-blue-600' : 'text-gray-800'
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-b border-slate-200 shadow-lg absolute w-full">
+          <div className="px-6 pt-2 pb-6 space-y-4 shadow-inner">
+            {[
+              { label: 'Products', path: '/products' },
+              { label: 'Services', path: '/services' },
+              { label: 'Developers', path: '/developers' },
+              { label: 'Docs', path: '/docs' }
+            ].map((item) => (
+              <Link 
+                key={item.path}
+                href={item.path} 
+                className={`block text-base font-semibold ${
+                  isActive(item.path) ? 'text-slate-900' : 'text-slate-600'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.label}
+                {item.label}
               </Link>
             ))}
-            <div className="pt-3 border-t border-gray-200">
+            <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
               <Link 
-                href="https://github.com/talosprotocol/talos" 
-                target="_blank" 
-                className="block w-full text-center py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+                href="/contact" 
+                className="w-full text-center px-5 py-3 font-bold text-slate-700 bg-slate-100 rounded-xl"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                GitHub
+                Contact
+              </Link>
+              <Link 
+                href="/docs" 
+                className="w-full text-center px-5 py-3 font-bold text-white bg-slate-900 rounded-xl shadow-md"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get Started
               </Link>
             </div>
           </div>

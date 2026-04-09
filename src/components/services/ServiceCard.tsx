@@ -7,6 +7,7 @@ interface ServiceCardProps {
   featured?: boolean;
   ordinal: string;
   additive_summary?: string;
+  onClick?: () => void;
 }
 
 export function ServiceCard({
@@ -18,12 +19,15 @@ export function ServiceCard({
   featured = false,
   ordinal,
   additive_summary,
+  onClick,
 }: Readonly<ServiceCardProps>) {
   return (
-    <div className={`flex flex-col p-8 rounded-2xl border transition-all duration-300 h-full ${
+    <div 
+      onClick={onClick}
+      className={`flex flex-col p-8 rounded-2xl border transition-all duration-300 h-full cursor-pointer group ${
       featured 
-        ? "bg-white border-blue-200 shadow-lg ring-1 ring-blue-100" 
-        : "bg-white border-gray-200"
+        ? "bg-white border-blue-200 shadow-xl ring-2 ring-blue-100 scale-[1.02]" 
+        : "bg-white border-gray-200 hover:border-blue-100 hover:shadow-md"
     }`}>
 
       

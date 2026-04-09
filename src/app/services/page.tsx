@@ -1,8 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { Footer } from "@/components/Footer";
 
 export default function ServicesPage() {
+  const [selectedTierId, setSelectedTierId] = useState<string | null>(null);
+
   const tiers = [
     {
       id: "advisory",
@@ -16,8 +21,7 @@ export default function ServicesPage() {
         "Policy & compliance mapping"
       ],
       engagement: "2-4 Weeks",
-      cta: "Book Advisory Call",
-      featured: false
+      cta: "Book Advisory Call"
     },
     {
       id: "implementation",
@@ -32,8 +36,7 @@ export default function ServicesPage() {
         "Sovereign host hardening"
       ],
       engagement: "4-12 Weeks",
-      cta: "Talk to Engineering",
-      featured: true
+      cta: "Talk to Engineering"
     },
     {
       id: "assurance",
@@ -48,8 +51,7 @@ export default function ServicesPage() {
         "Ongoing governance & reviews"
       ],
       engagement: "Annual Partnership",
-      cta: "Inquire about Assurance",
-      featured: false
+      cta: "Inquire about Assurance"
     }
   ];
 
@@ -87,7 +89,8 @@ export default function ServicesPage() {
               deliverables={tier.deliverables}
               engagement={tier.engagement}
               cta={tier.cta}
-              featured={tier.featured}
+              featured={selectedTierId === tier.id}
+              onClick={() => setSelectedTierId(tier.id)}
               ordinal={tier.ordinal}
               additive_summary={tier.additive_summary}
             />
