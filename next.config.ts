@@ -5,6 +5,7 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
 const nextConfig: NextConfig = {
   output: 'export',
+  transpilePackages: ['lucide-react'],
   turbopack: {
     root: process.cwd(),
   },

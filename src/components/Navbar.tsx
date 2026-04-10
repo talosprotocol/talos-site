@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { TalosLogo } from './TalosLogo';
 
 export function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,35 +15,37 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center h-16">
           
-          <Link href="/" className="flex items-center gap-2 group">
-            <Shield className="w-6 h-6 text-slate-800 group-hover:text-slate-600 transition-colors" />
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
+            <TalosLogo width={24} height={24} />
             <span className="text-xl font-black tracking-tight text-slate-900">TALOS</span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {[
-              { label: 'Products', path: '/products' },
-              { label: 'Services', path: '/services' },
-              { label: 'Developers', path: '/developers' },
-              { label: 'Docs', path: '/docs' }
-            ].map((item) => (
-              <Link 
-                key={item.path} 
-                href={item.path} 
-                className={`text-sm font-semibold transition-colors ${
-                  isActive(item.path) 
-                    ? 'text-slate-900' 
-                    : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-center space-x-10">
+              {[
+                { label: 'Products', path: '/products' },
+                { label: 'Services', path: '/services' },
+                { label: 'Developers', path: '/developers' },
+                { label: 'Docs', path: '/docs' }
+              ].map((item) => (
+                <Link 
+                  key={item.path} 
+                  href={item.path} 
+                  className={`text-sm font-semibold transition-colors ${
+                    isActive(item.path) 
+                      ? 'text-gray-900' 
+                      : 'text-gray-500 hover:text-gray-900'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 shrink-0">
             <Link 
               href="/contact" 
               className="text-sm font-bold text-slate-600 hover:text-slate-900 px-4 py-2 transition-colors"
@@ -57,12 +60,14 @@ export function Navbar() {
             </Link>
           </div>
 
-          <button 
-            className="md:hidden p-2 text-slate-600"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="md:hidden ml-auto">
+            <button 
+              className="p-2 text-slate-600"
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 

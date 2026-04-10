@@ -18,8 +18,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="antialiased text-slate-900 bg-white selection:bg-blue-100 selection:text-blue-900">
         {children}
-        <Analytics />
-        <SpeedInsights />
+        <Analytics key="vercel-analytics" />
+        <SpeedInsights key="vercel-speed-insights" />
       </body>
     </html>
   );
