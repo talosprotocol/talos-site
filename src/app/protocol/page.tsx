@@ -25,7 +25,7 @@ export default function Protocol() {
                    </li>
                    <li className="flex items-start gap-3">
                        <span className="text-blue-500 mt-1">▸</span>
-                       <span><strong>Decentralized ID:</strong> Identity via <code>did:key</code> (Ed25519) with DHT-based resolution.</span>
+                       <span><strong>Decentralized ID:</strong> Identity via <code>did:key</code> (Ed25519) with DHT-based resolution (Alpha).</span>
                    </li>
                    <li className="flex items-start gap-3">
                        <span className="text-blue-500 mt-1">▸</span>

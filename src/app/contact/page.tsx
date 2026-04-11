@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-600 uppercase mb-4">
-            Private Beta
+            Partner Private Beta
           </div>
           <h1 className="text-4xl font-bold mb-6 tracking-tight">Contact Us</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">

@@ -14,7 +14,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/guides/deployment.md",
     "integrates_with": ["talos-audit-service", "talos-dashboard"],
-    "cta_primary": "View API Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -32,7 +32,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/security/security-dashboard.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Setup Dashboard",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source",
     "feature_spotlight": {
       "title": "AI Configuration Assistant",
@@ -55,7 +55,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-scope.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Audit Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -73,7 +73,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-sdk-py", "talos-sdk-ts"],
-    "cta_primary": "Connector Guide",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -91,7 +91,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Commerce Specs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -109,7 +109,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/getting-started/quickstart.md",
     "integrates_with": ["talos-dashboard", "talos-contracts"],
-    "cta_primary": "Quickstart Guide",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -127,7 +127,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/observability.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "Automation Guide",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -145,7 +145,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/examples.md",
     "integrates_with": ["talos-contracts", "talos-sdk-ts"],
-    "cta_primary": "Chat Examples",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -164,7 +164,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/api/schemas.md",
     "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
-    "cta_primary": "View Schemas",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -183,7 +183,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/architecture/overview.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Architecture Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -201,7 +201,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/typescript-sdk.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
-    "cta_primary": "TS SDK Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -219,7 +219,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/python-sdk.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Python SDK Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -237,7 +237,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
-    "cta_primary": "Java SDK Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   },
   {
@@ -255,7 +255,7 @@
     ],
     "docs_url": "https://github.com/talosprotocol/talos/blob/main/docs/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
-    "cta_primary": "Go SDK Docs",
+    "cta_primary": "View Docs",
     "cta_secondary": "View Source"
   }
 ]

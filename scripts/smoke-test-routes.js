@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import http from 'node:http';
+import https from 'node:https';
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
@@ -12,13 +13,15 @@ const ROUTES = [
   '/methodology',
   '/roadmap',
   '/contact',
+  '/solutions',
+  '/products/talos-gateway',
   '/security/disclosure',
   '/products.json'
 ];
 
 function checkUrl(url) {
   return new Promise((resolve) => {
-    const protocol = url.startsWith('https') ? require('node:https') : require('node:http');
+    const protocol = url.startsWith('https') ? https : http;
     protocol.get(url, (res) => {
       if (res.statusCode >= 200 && res.statusCode < 400) {
         resolve(true);
@@ -73,7 +76,7 @@ console.log(`Checking routes on ${BASE_URL}...`);
 
 let failures = 0;
 for (const route of ROUTES) {
-  const success = await checkRoute(route);
+  const success = await checkUrl(`${BASE_URL}${route}`);
   if (!success) failures++;
 }
 
