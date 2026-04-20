@@ -4,7 +4,28 @@ import { ChevronRight, Shield, Cpu, Zap, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 
-export default function ProductDetailClient({ product }: { product: any }) {
+interface ProductDetail {
+  id: string;
+  name: string;
+  category: string;
+  tagline: string;
+  cta_primary: string;
+  cta_secondary: string;
+  docs_url: string;
+  repos: Array<{ url: string }>;
+  maturity: string;
+  problem: string;
+  outcome: string;
+  audience: string;
+  integrates_with?: string[];
+  feature_spotlight?: {
+    badge: string;
+    title: string;
+    description: string;
+  };
+}
+
+export default function ProductDetailClient({ product }: { product?: ProductDetail | null }) {
   if (!product) return null;
 
   return (

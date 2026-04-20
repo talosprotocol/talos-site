@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import http from 'node:http';
 import https from 'node:https';
 
