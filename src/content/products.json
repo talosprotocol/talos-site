@@ -10,7 +10,7 @@
     "problem": "Unmonitored agent-to-tool communication and lack of audit trails.",
     "outcome": "Unified control plane for all agentic interactions with centralized logging.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ai-gateway" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-ai-gateway" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/guides/deployment.md",
     "integrates_with": ["talos-audit-service", "talos-dashboard"],
@@ -28,7 +28,7 @@
     "problem": "Opaque agent operations making incident response difficult.",
     "outcome": "Real-time visibility into audit logs, capability usage, and system health.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/site/dashboard" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-dashboard" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/security/security-dashboard.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
@@ -51,7 +51,7 @@
     "problem": "Lack of verifiable accountability in autonomous agent interactions.",
     "outcome": "Merkle-tree anchored audit trails providing post-hoc verification and timing proofs.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/audit" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-audit-service" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/features/observability/audit-scope.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
@@ -69,7 +69,7 @@
     "problem": "Legacy MCP servers lacking the cryptographic security required for autonomous ecosystems.",
     "outcome": "Instant, zero-code upgrade of existing MCP tools to secure Talos-compatible resources.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/mcp-connector" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-mcp-connector" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-sdk-py", "talos-sdk-ts"],
@@ -87,7 +87,7 @@
     "problem": "AI Agents cannot safely perform financial transactions or negotiate with merchants.",
     "outcome": "Policy-enforced, autonomous commerce with opaque payment handling.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ucp-connector" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-ucp-connector" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/features/integrations/mcp-integration.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
@@ -105,7 +105,7 @@
     "problem": "Manual setup of cryptographic infrastructure is error-prone and insecure.",
     "outcome": "One-click, verified deployment of local Talos stacks via the Dashboard.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/tools/setup-helper" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-tui" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/getting-started/quickstart.md",
     "integrates_with": ["talos-dashboard", "talos-contracts"],
@@ -123,7 +123,7 @@
     "problem": "Security risks of granting high-privilege credentials to autonomous agents.",
     "outcome": "End-to-end secure automation of AWS, Kubernetes, and Terraform workflows.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/aiops" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-aiops" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/features/observability/observability.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
@@ -141,7 +141,7 @@
     "problem": "Centralized chat platforms intercepting and analyzing private communications.",
     "outcome": "Fully decentralized, DID-based encrypted messaging with immutable audit logs.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/services/ai-chat-agent" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-ai-chat-agent" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/sdk/examples.md",
     "integrates_with": ["talos-contracts", "talos-sdk-ts"],
@@ -160,7 +160,7 @@
     "problem": "Fragmented security schemas across multiple languages and services.",
     "outcome": "Strict, contract-driven interoperability and deterministic verification.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/contracts" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-contracts" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/api/schemas.md",
     "integrates_with": ["talos-core-rs", "talos-sdk-ts", "talos-sdk-py"],
@@ -179,7 +179,7 @@
     "problem": "Performance bottlenecks in cryptographic operations and encoding.",
     "outcome": "Blazing fast, memory-safe kernel wedge for critical security paths.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/core" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-core-rs" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/architecture/overview.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
@@ -197,7 +197,7 @@
     "problem": "Complex cryptographic workflows taxing frontend and backend developers.",
     "outcome": "Seamless, type-safe integration of Talos primitives into JS/TS apps.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/typescript" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-sdk-ts" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/sdk/typescript-sdk.md",
     "integrates_with": ["talos-gateway", "talos-dashboard"],
@@ -215,7 +215,7 @@
     "problem": "Lack of security primitives in mainstream AI agent frameworks.",
     "outcome": "Native integration with LangChain, AutoGPT, and custom AI toolchains.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/python" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-sdk-py" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/sdk/python-sdk.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
@@ -233,7 +233,7 @@
     "problem": "Integrating agentic security into large-scale, sovereign Java/Kotlin ecosystems.",
     "outcome": "Thread-safe, Spring-compatible security primitives for production JVM environments.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/java" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-sdk-java" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-audit-service"],
@@ -251,7 +251,7 @@
     "problem": "Performance overhead in high-frequency agentic communication and trading.",
     "outcome": "Lightning-fast secure sessions leveraging Go's native concurrency model.",
     "repos": [
-      { "label": "Source", "url": "https://github.com/talosprotocol/talos/tree/main/sdks/go" }
+      { "label": "Source", "url": "https://github.com/talosprotocol/talos-sdk-go" }
     ],
     "docs_url": "https://github.com/talosprotocol/talos-docs/blob/main/sdk/sdk-integration.md",
     "integrates_with": ["talos-gateway", "talos-mcp-connector"],
