@@ -7,36 +7,36 @@ export default function DocsPage() {
       title: "Getting Started",
       description: "New to Talos? Start with these guides to get up and running quickly.",
       links: [
-        { label: "Quickstart Guide", href: "https://github.com/talosprotocol/talos/blob/main/docs/getting-started/quickstart.md" },
-        { label: "Mental Model", href: "https://github.com/talosprotocol/talos/blob/main/docs/getting-started/mental-model.md" },
-        { label: "One-Command Demo", href: "https://github.com/talosprotocol/talos/blob/main/docs/getting-started/one-command-demo.md" },
+        { label: "Quickstart Guide", href: "https://github.com/talosprotocol/talos-docs/blob/main/getting-started/quickstart.md" },
+        { label: "Mental Model", href: "https://github.com/talosprotocol/talos-docs/blob/main/getting-started/mental-model.md" },
+        { label: "One-Command Demo", href: "https://github.com/talosprotocol/talos-docs/blob/main/getting-started/one-command-demo.md" },
       ]
     },
     {
       title: "Architecture",
       description: "Deep dive into the system design, protocol guarantees, and security proofs.",
       links: [
-        { label: "Architecture Overview", href: "https://github.com/talosprotocol/talos/blob/main/docs/architecture/overview.md" },
-        { label: "Protocol Guarantees", href: "https://github.com/talosprotocol/talos/blob/main/docs/architecture/protocol-guarantees.md" },
-        { label: "Threat Model", href: "https://github.com/talosprotocol/talos/blob/main/docs/architecture/threat-model.md" },
+        { label: "Architecture Overview", href: "https://github.com/talosprotocol/talos-docs/blob/main/architecture/overview.md" },
+        { label: "Protocol Guarantees", href: "https://github.com/talosprotocol/talos-docs/blob/main/architecture/protocol-guarantees.md" },
+        { label: "Threat Model", href: "https://github.com/talosprotocol/talos-docs/blob/main/architecture/threat-model.md" },
       ]
     },
     {
       title: "Features",
       description: "Explore core capabilities like Identity, Authorization, and Auditing.",
       links: [
-        { label: "Agent Identity", href: "https://github.com/talosprotocol/talos/blob/main/docs/features/identity/agent-identity.md" },
-        { label: "Capability Authz", href: "https://github.com/talosprotocol/talos/blob/main/docs/features/authorization/capability-authorization.md" },
-        { label: "Audit Explorer", href: "https://github.com/talosprotocol/talos/blob/main/docs/features/observability/audit-explorer.md" },
+        { label: "Agent Identity", href: "https://github.com/talosprotocol/talos-docs/blob/main/features/identity/agent-identity.md" },
+        { label: "Capability Authz", href: "https://github.com/talosprotocol/talos-docs/blob/main/features/authorization/capability-authorization.md" },
+        { label: "Audit Explorer", href: "https://github.com/talosprotocol/talos-docs/blob/main/features/observability/audit-explorer.md" },
       ]
     },
     {
       title: "SDK & API",
       description: "Build on Talos with our multi-language SDKs and comprehensive API reference.",
       links: [
-        { label: "Python SDK", href: "https://github.com/talosprotocol/talos/blob/main/docs/sdk/python-sdk.md" },
-        { label: "TypeScript SDK", href: "https://github.com/talosprotocol/talos/blob/main/docs/sdk/typescript-sdk.md" },
-        { label: "API Reference", href: "https://github.com/talosprotocol/talos/blob/main/docs/api/api-reference.md" },
+        { label: "Python SDK", href: "https://github.com/talosprotocol/talos-docs/blob/main/sdk/python-sdk.md" },
+        { label: "TypeScript SDK", href: "https://github.com/talosprotocol/talos-docs/blob/main/sdk/typescript-sdk.md" },
+        { label: "API Reference", href: "https://github.com/talosprotocol/talos-docs/blob/main/api/api-reference.md" },
       ]
     }
   ];
@@ -84,7 +84,7 @@ export default function DocsPage() {
            </div>
            
            <Link 
-             href="https://github.com/talosprotocol/talos/tree/main/docs" 
+             href="https://github.com/talosprotocol/talos-docs" 
              target="_blank" 
              className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-sm whitespace-nowrap"
            >

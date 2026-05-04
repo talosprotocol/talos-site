@@ -7,7 +7,7 @@
     "unit": "auth/sec",
     "display_value": "12k",
     "scope": ["benchmark_strip"],
-    "source_url": "https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md",
+    "source_url": "https://github.com/talosprotocol/talos-docs/blob/main/testing/benchmarks.md",
     "notes": "M4 Max, service-level gateway authorize_fast",
     "risk_level": "low",
     "status": "live"
@@ -20,7 +20,7 @@
     "unit": "ms",
     "display_value": "< 150μs",
     "scope": ["benchmark_strip"],
-    "source_url": "https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md",
+    "source_url": "https://github.com/talosprotocol/talos-docs/blob/main/testing/benchmarks.md",
     "notes": "M4 Max, Ed25519 verification",
     "risk_level": "low",
     "status": "live"
@@ -33,7 +33,7 @@
     "unit": "ops/sec",
     "display_value": "44k+",
     "scope": ["benchmark_strip"],
-    "source_url": "https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md",
+    "source_url": "https://github.com/talosprotocol/talos-docs/blob/main/testing/benchmarks.md",
     "notes": "Python SDK, Session.encrypt(35B)",
     "risk_level": "low",
     "status": "live"
@@ -46,7 +46,7 @@
     "unit": "ops/sec",
     "display_value": "270k+",
     "scope": ["benchmark_strip"],
-    "source_url": "https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md",
+    "source_url": "https://github.com/talosprotocol/talos-docs/blob/main/testing/benchmarks.md",
     "notes": "Python SDK, SHA256 + canonical serialization",
     "risk_level": "low",
     "status": "live"
@@ -59,7 +59,7 @@
     "unit": "events/sec",
     "display_value": "12k",
     "scope": ["benchmark_strip"],
-    "source_url": "https://github.com/talosprotocol/talos/blob/main/docs/testing/benchmarks.md",
+    "source_url": "https://github.com/talosprotocol/talos-docs/blob/main/testing/benchmarks.md",
     "notes": "M4 Max, service-level audit log_ingest",
     "risk_level": "low",
     "status": "live"
